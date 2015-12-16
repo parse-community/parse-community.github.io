@@ -827,7 +827,8 @@ section {
   margin: 0 auto;
   height: 72px;
   background: rgba(14, 105, 161, 0.03);
-  position: relative; }
+  position: relative;
+  border-bottom: 1px solid #E0E0EA; }
   .repoList:hover .repoTitle h4 {
     color: #169CEE; }
   .repoList .repoTitle, .repoList .repoDescription, .repoList .repoInfo {
