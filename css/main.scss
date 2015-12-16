@@ -1040,11 +1040,6 @@ section{
     position: relative;
     border: none;
     border-bottom: 1px solid $purpleBorder;
-    &:hover{
-        .repoTitle h4{
-            color: $mainBlue;
-        }
-    }
     .repoTitle, .repoDescription, .repoInfo{
         position: relative;
         h4, p{
@@ -1117,6 +1112,11 @@ section{
     a{
         display: block;
         text-decoration: none;
+        &:hover{
+            h4{
+                color: $mainBlue;
+            }
+        }
     }
     &:last-of-type{
         border-bottom: 0px;
