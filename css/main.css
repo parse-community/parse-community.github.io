@@ -857,6 +857,7 @@ section {
     .repoList .metadata span {
       margin-right: 12px; }
   .repoList .repoDescription {
+    opacity: 0.6;
     margin: 0px;
     padding-left: 24px;
     overflow: hidden;
