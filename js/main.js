@@ -55,6 +55,8 @@ $(document).ready(function(){
 				} if (sortLanguage === "null"){
 					language = "";
 				}
+			} else if (language === null || language === ""){
+				language = "";
 			}
 
 			//keep tally of total forks, stars and repos
