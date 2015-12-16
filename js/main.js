@@ -19,24 +19,6 @@ $(document).ready(function(){
 	//render repo to page
 	function addToSection(sectionTitle, url, title, description, forks, stars, language){
 		sectionTitle.append("<tr class='repoList'><a href='" + url + "' target='_blank'><td><h4>" + title + "</h4><p class='repoDescription'>" + description + "</p></td><td class='language'>" + language + "</td><td><img src='img/starsDark.svg' alt='' class='icon'>" + stars + "</td><td><img src='img/forksDark.svg' alt='' class='icon'>" + forks + "</td></a></tr>");
-		/*sectionTitle.append("
-			<div class='repoList'>
-				<a href='" + url + "' target='_blank'>
-					<div class='repoTitle'>
-						<h4>" + title + "</h4>
-					</div>
-					<div class='repoDescription'>
-						<p>" + description + "</p>
-					</div>
-					<div class='repoInfo'>
-						<p>
-						<span><img src='img/forksDark.svg' alt='' class='icon'>" + forks + "</span>
-						<span><img src='img/starsDark.svg' alt='' class='icon'>" + stars + "</span>
-						<span>" + language + "</span>
-						</p>
-					</div>
-				</a>
-			</div>");*/
 	}
 
 	if (typeof gitJson !== 'undefined'){
@@ -54,6 +36,13 @@ $(document).ready(function(){
 			//ignore private repos
 			if (privateRepo === true){
 				continue;
+			}
+
+			//clean up language titles
+			if (language.toLowerCase() === "javascript"){
+				language = "JS";
+			} else if (language.toLowerCase() === "objective-c"){
+				language = "Obj-C";
 			}
 
 			//keep tally of total forks, stars and repos
