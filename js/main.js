@@ -47,11 +47,12 @@ $(document).ready(function(){
 
 			//clean up language titles
 			if (language !== null && language !== ""){
-				if (language.toLowerCase() === "javascript"){
+				var sortLanguage = language.toLowerCase();
+				if (sortLanguage === "javascript"){
 					language = "JS";
-				} else if (language.toLowerCase() === "objective-c"){
+				} else if (sortLanguage === "objective-c"){
 					language = "Obj-C";
-				} if (language.toLowerCase() === "null"){
+				} if (sortLanguage === "null"){
 					language = "";
 				}
 			}
