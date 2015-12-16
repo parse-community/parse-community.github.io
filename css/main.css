@@ -843,13 +843,13 @@ section {
     @media screen and (max-width: 600px) {
       .repoList h4 {
         padding-left: 16px; } }
-  .repoList p.metadata {
+  .repoList .metadata {
     margin: 0px;
     opacity: 0.45;
     font-size: 14px;
     font-family: "din";
     line-height: 16px; }
-    .repoList p.metadata span {
+    .repoList .metadata span {
       margin-right: 12px; }
   .repoList .repoDescription {
     margin: 0px;
