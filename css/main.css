@@ -655,7 +655,7 @@ section {
   width: 100%;
   background: #ffffff; }
   section .tableWrapper {
-    border-radius: 8px;
+    border-radius: 4px;
     max-width: 650px;
     margin: 0 auto;
     overflow: hidden;
