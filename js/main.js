@@ -140,7 +140,7 @@ $(document).ready(function(){
 	}
 
 	//write this into the page
-	var communityRepos = Parse.Object.extend("communityRepos");
+	var communityRepos = Parse.Object.extend("CommunityRepos");
 	var query = new Parse.Query(communityRepos);
 	query.ascending("repoName");
 	query.find({
@@ -150,7 +150,7 @@ $(document).ready(function(){
 		      	var object 		= results[i];
       			var title  		= object.get('repoName');
       			var description = object.get('repoDescription');
-      			var url  		= object.get('repoUrl');
+      			var url  		= object.get('repoURL');
       			addCommunityRepoToHTML(title, description, url);
 		    }
 		},
