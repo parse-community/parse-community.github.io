@@ -1049,8 +1049,7 @@ section{
         }
     }
     h4{
-        margin: 2px 0px 2px 0px;
-        left: 0px;
+        margin: 15px 0px 4px 0px;
         font-size: 14px;
         line-height: 16px;
         font-family: 'alrightBold';
@@ -1112,6 +1111,9 @@ section{
     a{
         display: block;
         text-decoration: none;
+        float: left;
+        height: 100%;
+        width: 100%;
         &:hover{
             h4{
                 color: $mainBlue;

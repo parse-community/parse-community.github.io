@@ -837,8 +837,7 @@ section {
       overflow: hidden;
       white-space: nowrap; }
   .repoList h4 {
-    margin: 2px 0px 2px 0px;
-    left: 0px;
+    margin: 15px 0px 4px 0px;
     font-size: 14px;
     line-height: 16px;
     font-family: 'alrightBold';
@@ -889,7 +888,10 @@ section {
             display: block; } }
   .repoList a {
     display: block;
-    text-decoration: none; }
+    text-decoration: none;
+    float: left;
+    height: 100%;
+    width: 100%; }
     .repoList a:hover h4 {
       color: #169CEE; }
   .repoList:last-of-type {
