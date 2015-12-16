@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-359 -584 480 1280" style="enable-background:new -359 -584 480 1280;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#0E69A1;}
+	.st1{fill:#169CEE;}
+</style>
+<g id="wheels_1_">
+	<g id="wheel3_1_">
+		<circle class="st0" cx="12" cy="660" r="36"/>
+		<circle class="st1" cx="12" cy="660" r="20"/>
+		<g>
+			<circle class="st0" cx="26" cy="660" r="2"/>
+			<circle class="st0" cx="-2" cy="660" r="2"/>
+			<circle class="st0" cx="12" cy="674" r="2"/>
+			<circle class="st0" cx="12" cy="646" r="2"/>
+			<circle class="st0" cx="21.9" cy="650.1" r="2"/>
+			<circle class="st0" cx="2.1" cy="669.9" r="2"/>
+			<circle class="st0" cx="21.9" cy="669.9" r="2"/>
+			<circle class="st0" cx="2.1" cy="650.1" r="2"/>
+		</g>
+	</g>
+	<g id="wheel2_1_">
+		<circle class="st0" cx="-191.8" cy="660" r="36"/>
+		<circle class="st1" cx="-191.8" cy="661" r="20"/>
+		<g>
+			<circle class="st0" cx="-177.8" cy="661" r="2"/>
+			<circle class="st0" cx="-205.8" cy="661" r="2"/>
+			<circle class="st0" cx="-191.8" cy="675" r="2"/>
+			<circle class="st0" cx="-191.8" cy="647" r="2"/>
+			<circle class="st0" cx="-181.9" cy="651.1" r="2"/>
+			<circle class="st0" cx="-201.7" cy="670.9" r="2"/>
+			<circle class="st0" cx="-181.9" cy="670.9" r="2"/>
+			<circle class="st0" cx="-201.7" cy="651.1" r="2"/>
+		</g>
+	</g>
+	<g id="wheel1_1_">
+		<circle class="st0" cx="-284.7" cy="660" r="36"/>
+		<circle class="st1" cx="-284.7" cy="661" r="20"/>
+		<g>
+			<circle class="st0" cx="-270.7" cy="661" r="2"/>
+			<circle class="st0" cx="-298.7" cy="661" r="2"/>
+			<circle class="st0" cx="-284.7" cy="675" r="2"/>
+			<circle class="st0" cx="-284.7" cy="647" r="2"/>
+			<circle class="st0" cx="-274.8" cy="651.1" r="2"/>
+			<circle class="st0" cx="-294.6" cy="670.9" r="2"/>
+			<circle class="st0" cx="-274.8" cy="670.9" r="2"/>
+			<circle class="st0" cx="-294.6" cy="651.1" r="2"/>
+		</g>
+	</g>
+</g>
+</svg>

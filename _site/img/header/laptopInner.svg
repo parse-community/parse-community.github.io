@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="50 -594 1300 1300" style="enable-background:new 50 -594 1300 1300;" xml:space="preserve">
+<style type="text/css">
+	.st0{clip-path:url(#SVGID_2_);}
+	.st1{fill:#0E69A1;}
+	.st2{fill:#169CEE;}
+</style>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="550" y="202.9" width="699.7" height="437.5"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<g id="laptopContent" class="st0">
+		<g>
+			<rect x="845.9" y="307.9" class="st1" width="240" height="120"/>
+			<rect x="713.9" y="307.9" class="st1" width="120" height="120"/>
+			<rect x="713.9" y="441.7" class="st1" width="372" height="24"/>
+			<rect x="713.9" y="477.9" class="st1" width="324.8" height="24"/>
+			<rect x="713.9" y="514.6" class="st1" width="290.1" height="24"/>
+			<rect x="713.9" y="550.9" class="st1" width="347.4" height="24"/>
+			<rect x="713.9" y="586.9" class="st1" width="273.3" height="24"/>
+			<rect x="713.9" y="623.1" class="st1" width="312.7" height="17.3"/>
+		</g>
+		<g id="browserChrome">
+			<rect x="550" y="202.9" class="st1" width="699.7" height="80"/>
+			<path class="st2" d="M1187.7,266.9h-528c-4.4,0-8-3.6-8-8v-12.1c0-4.4,3.6-8,8-8h528c4.4,0,8,3.6,8,8v12.1
+				C1195.7,263.3,1192.1,266.9,1187.7,266.9z"/>
+			<circle class="st2" cx="624" cy="252.8" r="14"/>
+			<circle class="st2" cx="588" cy="252.8" r="14"/>
+			<circle class="st2" cx="1231.7" cy="220.9" r="6"/>
+			<circle class="st2" cx="1195.7" cy="220.9" r="6"/>
+			<circle class="st2" cx="1213.7" cy="220.9" r="6"/>
+			<path class="st2" d="M1227.7,266.8h-12c-4.4,0-8-3.6-8-8v-12c0-4.4,3.6-8,8-8h12c4.4,0,8,3.6,8,8v12
+				C1235.7,263.2,1232.1,266.8,1227.7,266.8z"/>
+		</g>
+	</g>
+</g>
+</svg>

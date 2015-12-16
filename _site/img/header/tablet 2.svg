@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-395 -924 408 1280" style="enable-background:new -395 -924 408 1280;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#4BBC6E;}
+	.st1{fill:#555574;}
+	.st2{fill:#424259;}
+</style>
+<g id="tablet">
+	<g id="tablet_1_">
+		<path class="st0" d="M-395,324v-536c0-17.7,14.3-32,32-32h340.6c17.7,0,32,14.3,32,32v536c0,17.7-14.3,32-32,32H-363
+			C-380.7,356-395,341.7-395,324z"/>
+		<rect x="-384.5" y="-194.3" class="st1" width="383" height="494"/>
+		<path class="st2" d="M-169,316.1h-52c-5.5,0-10,4.5-10,10v4c0,5.5,4.5,10,10,10h52c5.5,0,10-4.5,10-10v-4
+			C-159,320.6-163.5,316.1-169,316.1z"/>
+	</g>
+	<g id="tabletContent">
+		<rect x="-353" y="-164.9" class="st2" width="204.7" height="97.1"/>
+		<rect x="-130.1" y="-164.9" class="st2" width="97.1" height="97.1"/>
+		<rect x="-353" y="-49.2" class="st2" width="97.1" height="97.1"/>
+		<rect x="-237.7" y="-49.2" class="st2" width="204.7" height="97.1"/>
+		<rect x="-353" y="62.2" class="st2" width="320" height="97.1"/>
+		<rect x="-353" y="173.2" class="st2" width="204.7" height="97.1"/>
+		<rect x="-130.1" y="173.2" class="st2" width="97.1" height="97.1"/>
+	</g>
+</g>
+</svg>
