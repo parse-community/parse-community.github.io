@@ -43,7 +43,6 @@ $(document).ready(function(){
 			if (description !== null && description !== ""){
 				sortDescription = description.toLowerCase();
 			}
-			console.log(sortDescription);
 
 			//clean up language titles
 			if (language !== null && language !== ""){
@@ -115,12 +114,12 @@ $(document).ready(function(){
 				addToSection($("section.socialRepos table"), url, title, description, forks, stars, language);
 			//TUTORIALS CATEGORY
 			//  if name tutorial
-			} else if (sortTitle.includes("tutorial") === true || sortDescription.includes("example") || sortDescription.includes("tutorial")){
+			} else if (sortTitle.includes("tutorial") === true || sortDescription.includes("tutorial")){
 				//write them to the page
 				addToSection($("section.tutorials table"), url, title, description, forks, stars, language);
 			//SAMPLES CATEGORY
 			//  if name todo, demo, any, scrumptious, store, f8, internetcar 
-			} else if (sortTitle.includes("todo") === true || sortTitle.includes("demo") === true || sortTitle.includes("any") === true || sortTitle.includes("scrumptious") === true || sortTitle.includes("store") === true || sortTitle.includes("f8") === true || sortTitle.includes("internetcar") === true){
+			} else if (sortTitle.includes("todo") === true || sortTitle.includes("demo") === true || sortTitle.includes("any") === true || sortTitle.includes("store") === true || sortTitle.includes("f8") === true || sortTitle.includes("internetcar") === true || sortDescription.includes("example")){
 				//write them to the page
 				addToSection($("section.sampleApps table"), url, title, description, forks, stars, language);
 			//OTHER CATEGORY
