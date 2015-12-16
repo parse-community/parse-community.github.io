@@ -18,7 +18,25 @@ $(document).ready(function(){
 
 	//render repo to page
 	function addToSection(sectionTitle, url, title, description, forks, stars, language){
-		sectionTitle.append("<div class='repoList'><a href='" + url + "' target='_blank'><div class='repoTitle'><h4>" + title + "</h4></div><div class='repoDescription'><p>" + description + "</p></div><div class='repoInfo'><p><span><img src='img/forksDark.svg' alt='' class='icon'>" + forks + "</span><span><img src='img/starsDark.svg' alt='' class='icon'>" + stars + "</span><span>" + language + "</span></p></div></a></div>");
+		sectionTitle.append("<tr class='repoList'><a href='" + url + "' target='_blank'><td><h4>" + title + "</h4><p class='repoDescription'>" + description + "</p></td><td>" + language + "</td><td><img src='img/starsDark.svg' alt='' class='icon'>" + stars + "</td><td><img src='img/forksDark.svg' alt='' class='icon'>" + forks + "</td></a></tr>");
+		/*sectionTitle.append("
+			<div class='repoList'>
+				<a href='" + url + "' target='_blank'>
+					<div class='repoTitle'>
+						<h4>" + title + "</h4>
+					</div>
+					<div class='repoDescription'>
+						<p>" + description + "</p>
+					</div>
+					<div class='repoInfo'>
+						<p>
+						<span><img src='img/forksDark.svg' alt='' class='icon'>" + forks + "</span>
+						<span><img src='img/starsDark.svg' alt='' class='icon'>" + stars + "</span>
+						<span>" + language + "</span>
+						</p>
+					</div>
+				</a>
+			</div>");*/
 	}
 
 	if (typeof gitJson !== 'undefined'){
@@ -92,22 +110,22 @@ $(document).ready(function(){
 			//  if name includes facebook, twitter
 			if (sortTitle.includes("facebook") === true || sortTitle.includes("twitter") === true){
 				//write them to the page
-				addToSection($("section.socialRepos"), url, title, description, forks, stars, language);
+				addToSection($("section.socialRepos table"), url, title, description, forks, stars, language);
 			//TUTORIALS CATEGORY
 			//  if name tutorial
 			} else if (sortTitle.includes("tutorial") === true){
 				//write them to the page
-				addToSection($("section.tutorials"), url, title, description, forks, stars, language);
+				addToSection($("section.tutorials table"), url, title, description, forks, stars, language);
 			//SAMPLES CATEGORY
 			//  if name todo, demo, any, scrumptious, store, f8, internetcar 
 			} else if (sortTitle.includes("todo") === true || sortTitle.includes("demo") === true || sortTitle.includes("any") === true || sortTitle.includes("scrumptious") === true || sortTitle.includes("store") === true || sortTitle.includes("f8") === true || sortTitle.includes("internetcar") === true){
 				//write them to the page
-				addToSection($("section.sampleApps"), url, title, description, forks, stars, language);
+				addToSection($("section.sampleApps table"), url, title, description, forks, stars, language);
 			//OTHER CATEGORY
 			//   ...everything else
 			} else {
 				//write them to the page
-				addToSection($("section.other"), url, title, description, forks, stars, language);
+				addToSection($("section.other table"), url, title, description, forks, stars, language);
 			}
 		}
 	}

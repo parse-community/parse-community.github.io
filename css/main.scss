@@ -820,6 +820,14 @@ section{
     position: relative;
     width: 100%;
     background: $white;
+    table{
+        width: 100%;
+        max-width: 650px;
+        margin: 0 auto;
+        td{
+            height: 72px;
+        }
+    }
     &:first-of-type{
         padding-top: 32px;
     }
@@ -1030,36 +1038,30 @@ section{
         }
     }
     .repoTitle, .repoDescription, .repoInfo{
-        position: absolute;
+        position: relative;
         h4, p{
             text-overflow: ellipsis;
             overflow: hidden;
             white-space: nowrap;
         }
     }
-    .repoTitle{
-        top: 16px;
+    h4{
+        margin: 4px 0px 0px 0px;
         left: 0px;
-        h4{
-            font-size: 14px;
-            line-height: 16px;
-            font-family: 'alrightBold';
-            color: $purpleText;
-            padding-left: 24px;
-            @media screen and (max-width: $smallWidth){
-                padding-left: 16px;
-            }
+        font-size: 14px;
+        line-height: 16px;
+        font-family: 'alrightBold';
+        color: $purpleText;
+        padding-left: 24px;
+        @media screen and (max-width: $smallWidth){
+            padding-left: 16px;
         }
     }
     .repoDescription{
-        top: 36px;
-        left: 0px;
-        max-width: 75%;
-        p{
-            padding-left: 24px;
-            @media screen and (max-width: $smallWidth){
-                padding-left: 16px;
-            }
+        margin: 0px;
+        padding-left: 24px;
+        @media screen and (max-width: $smallWidth){
+            padding-left: 16px;
         }
     }
     .repoInfo{

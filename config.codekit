@@ -583,9 +583,9 @@
 	},
 "projectAttributes": {
 	"bowerAbbreviatedPath": "",
-	"displayValue": "parseplatform.github.io",
-	"displayValueWasSetByUser": 0,
-	"iconImageName": "harddrive_orange"
+	"displayValue": "definitelynothidingthis.github.io",
+	"displayValueWasSetByUser": 1,
+	"iconImageName": "pencil_darkGray"
 	},
 "projectSettings": {
 	"alwaysUseExternalServer": 0,
