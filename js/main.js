@@ -47,7 +47,6 @@ $(document).ready(function(){
 			//clean up language titles
 			if (language !== null && language !== ""){
 				var sortLanguage = language.toLowerCase();
-				console.log(sortLanguage);
 				if (sortLanguage === "javascript"){
 					language = "JS";
 				} else if (sortLanguage === "objective-c"){
