@@ -18,7 +18,7 @@ $(document).ready(function(){
 
 	//render repo to page
 	function addToSection(sectionTitle, url, title, description, forks, stars, language){
-		sectionTitle.append("<tr class='repoList'><a href='" + url + "' target='_blank'><td><h4>" + title + "</h4><p class='repoDescription'>" + description + "</p></td><td class='language metadata'>" + language + "</td><td class='metadata'><img src='img/starsDark.svg' alt='' class='icon'>" + stars + "</td><td class='metadata'><img src='img/forksDark.svg' alt='' class='icon'>" + forks + "</td></a></tr>");
+		sectionTitle.append("<tr class='repoList'><td><a href='" + url + "' target='_blank'><h4>" + title + "</h4><p class='repoDescription'>" + description + "</p></td><td class='language metadata'>" + language + "</a></td><td class='metadata'><img src='img/starsDark.svg' alt='' class='icon'>" + stars + "</td><td class='metadata'><img src='img/forksDark.svg' alt='' class='icon'>" + forks + "</td></tr>");
 	}
 
 	if (typeof gitJson !== 'undefined'){
@@ -40,7 +40,6 @@ $(document).ready(function(){
 
 			//clean up language titles
 			if (language !== null && language !== ""){
-				console.log("language 2");
 				if (language.toLowerCase() === "javascript"){
 					language = "JS";
 				} else if (language.toLowerCase() === "objective-c"){
