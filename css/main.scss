@@ -822,10 +822,13 @@ section{
     background: $white;
     .tableWrapper{
         border-radius: 8px;
+        max-width: 650px;
+        margin: 0 auto;
+        overflow: hidden;
+        border: 1px solid #E0E0EA;
     }
     table{
         width: 100%;
-        max-width: 650px;
         margin: 0 auto;
         td{
             height: 72px;
@@ -1035,7 +1038,6 @@ section{
     height: 72px;
     background: $fadedBlue;
     position: relative;
-    border-bottom: 0px;
     &:hover{
         .repoTitle h4{
             color: $mainBlue;
@@ -1121,7 +1123,7 @@ section{
     }
     &:last-of-type{
         border-radius: 0px 0px 4px 4px;
-        border-bottom: 1px solid $purpleBorder;
+        border-bottom: 0px;
     }
 }
 

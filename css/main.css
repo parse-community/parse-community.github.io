@@ -655,10 +655,13 @@ section {
   width: 100%;
   background: #ffffff; }
   section .tableWrapper {
-    border-radius: 8px; }
+    border-radius: 8px;
+    max-width: 650px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #E0E0EA; }
   section table {
     width: 100%;
-    max-width: 650px;
     margin: 0 auto; }
     section table td {
       height: 72px;
@@ -824,8 +827,7 @@ section {
   margin: 0 auto;
   height: 72px;
   background: rgba(14, 105, 161, 0.03);
-  position: relative;
-  border-bottom: 0px; }
+  position: relative; }
   .repoList:hover .repoTitle h4 {
     color: #169CEE; }
   .repoList .repoTitle, .repoList .repoDescription, .repoList .repoInfo {
@@ -894,7 +896,7 @@ section {
     border-radius: 4px 4px 0px 0px; }
   .repoList:last-of-type {
     border-radius: 0px 0px 4px 4px;
-    border-bottom: 1px solid #E0E0EA; }
+    border-bottom: 0px; }
 
 footer {
   float: left;
