@@ -1047,7 +1047,7 @@ section{
         }
     }
     h4{
-        margin: 4px 0px 0px 0px;
+        margin: 2px 0px 2px 0px;
         left: 0px;
         font-size: 14px;
         line-height: 16px;
@@ -1056,6 +1056,16 @@ section{
         padding-left: 24px;
         @media screen and (max-width: $smallWidth){
             padding-left: 16px;
+        }
+    }
+    p.metadata{
+        margin: 0px;
+        opacity: 0.45;
+        font-size: 14px;
+        font-family: "din";
+        line-height: 16px;
+        span{
+            margin-right: 12px;
         }
     }
     .repoDescription{
