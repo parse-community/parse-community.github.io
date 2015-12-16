@@ -34,11 +34,6 @@ $(document).ready(function(){
 				privateRepo 	= gitJson[j].private,
 				sortDescription;
 
-			//ignore private repos
-			if (privateRepo === true){
-				continue;
-			}
-
 			// sortable description
 			if (description !== null && description !== ""){
 				sortDescription = description.toLowerCase();
@@ -120,7 +115,7 @@ $(document).ready(function(){
 				addToSection($("section.tutorials table"), url, title, description, forks, stars, language);
 			//SAMPLES CATEGORY
 			//  if name todo, demo, any, scrumptious, store, f8, internetcar 
-			} else if (sortTitle.includes("todo") === true || sortTitle.includes("demo") === true || sortTitle.includes("any") === true || sortTitle.includes("store") === true || sortTitle.includes("f8") === true || sortTitle.includes("internetcar") === true || sortDescription.includes("example")){
+			} else if (sortTitle.includes("todo") === true || sortTitle.includes("demo") === true || sortTitle.includes("any") === true || sortTitle.includes("store") === true || sortTitle.includes("f8") === true || sortTitle.includes("internetcar") === true || sortDescription.includes("example") || sortDescription.includes("sample")){
 				//write them to the page
 				addToSection($("section.sampleApps table"), url, title, description, forks, stars, language);
 			//OTHER CATEGORY
