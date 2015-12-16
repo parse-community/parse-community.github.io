@@ -42,9 +42,8 @@ $(document).ready(function(){
 			// sortable description
 			if (description !== null && description !== ""){
 				sortDescription = description.toLowerCase();
-			} else{
-				sortDescription = description;
 			}
+			console.log(sortDescription);
 
 			//clean up language titles
 			if (language !== null && language !== ""){
