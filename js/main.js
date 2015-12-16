@@ -44,6 +44,8 @@ $(document).ready(function(){
 					language = "JS";
 				} else if (language.toLowerCase() === "objective-c"){
 					language = "Obj-C";
+				} if (language.toLowerCase() === "null"){
+					language = "";
 				}
 			}
 
