@@ -18,7 +18,25 @@ $(document).ready(function(){
 
 	//render repo to page
 	function addToSection(sectionTitle, url, title, description, forks, stars, language){
-		sectionTitle.append("<div class='repoList'><a href='" + url + "' target='_blank'><div class='repoTitle'><h4>" + title + "</h4></div><div class='repoDescription'><p>" + description + "</p></div><div class='repoInfo'><p><span><img src='img/forksDark.svg' alt='' class='icon'>" + forks + "</span><span><img src='img/starsDark.svg' alt='' class='icon'>" + stars + "</span><span>" + language + "</span></p></div></a></div>");
+		sectionTitle.append("<tr class='repoList'><a href='" + url + "' target='_blank'><td><h4 class='repoTitle'>" + title + "</h4><p class='repoDescription'>" + description + "</p></td><td class='repoInfo'><td><img src='img/forksDark.svg' alt='' class='icon'>" + forks + "</td><td><img src='img/starsDark.svg' alt='' class='icon'>" + stars + "</td><td>" + language + "</td></td></a></tr>");
+		/*sectionTitle.append("
+			<div class='repoList'>
+				<a href='" + url + "' target='_blank'>
+					<div class='repoTitle'>
+						<h4>" + title + "</h4>
+					</div>
+					<div class='repoDescription'>
+						<p>" + description + "</p>
+					</div>
+					<div class='repoInfo'>
+						<p>
+							<span><img src='img/forksDark.svg' alt='' class='icon'>" + forks + "</span>
+							<span><img src='img/starsDark.svg' alt='' class='icon'>" + stars + "</span>
+							<span>" + language + "</span>
+						</p>
+					</div>
+				</a>
+			</div>");*/
 	}
 
 	if (typeof gitJson !== 'undefined'){
@@ -64,7 +82,6 @@ $(document).ready(function(){
 					//xamarin and dot net
 					$(".xamarinRepo .sdkRepoStar").text(stars);
 					$(".xamarinRepo .sdkRepoFork").text(forks);
-
 					//Unity
 					$(".unityRepo .sdkRepoStar").text(stars);
 					$(".unityRepo .sdkRepoFork").text(forks);
