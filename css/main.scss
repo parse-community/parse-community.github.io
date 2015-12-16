@@ -1115,11 +1115,8 @@ section{
         }
     }
     a{
-        width: 100%;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        height: 100%;
+        display: block;
+        text-decoration: none;
     }
     &:last-of-type{
         border-bottom: 0px;
