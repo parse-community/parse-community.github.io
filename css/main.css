@@ -828,6 +828,7 @@ section {
   height: 72px;
   background: rgba(14, 105, 161, 0.03);
   position: relative;
+  border: none;
   border-bottom: 1px solid #E0E0EA; }
   .repoList:hover .repoTitle h4 {
     color: #169CEE; }

@@ -1038,6 +1038,7 @@ section{
     height: 72px;
     background: $fadedBlue;
     position: relative;
+    border: none;
     border-bottom: 1px solid $purpleBorder;
     &:hover{
         .repoTitle h4{
