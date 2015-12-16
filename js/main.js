@@ -31,11 +31,19 @@ $(document).ready(function(){
 				stars 			= parseInt(gitJson[j].stargazers_count),
 				forks 			= parseInt(gitJson[j].forks_count),
 				language    	= gitJson[j].language,
-				privateRepo 	= gitJson[j].private;
+				privateRepo 	= gitJson[j].private,
+				sortDescription;
 
 			//ignore private repos
 			if (privateRepo === true){
 				continue;
+			}
+
+			// sortable description
+			if (description !== null && description !== ""){
+				sortDescription = description.toLowerCase();
+			} else{
+				sortDescription = description;
 			}
 
 			//clean up language titles
@@ -106,7 +114,7 @@ $(document).ready(function(){
 				addToSection($("section.socialRepos table"), url, title, description, forks, stars, language);
 			//TUTORIALS CATEGORY
 			//  if name tutorial
-			} else if (sortTitle.includes("tutorial") === true){
+			} else if (sortTitle.includes("tutorial") === true || sortDescription.includes("example") || sortDescription.includes("tutorial")){
 				//write them to the page
 				addToSection($("section.tutorials table"), url, title, description, forks, stars, language);
 			//SAMPLES CATEGORY
