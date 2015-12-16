@@ -40,6 +40,7 @@ $(document).ready(function(){
 
 			//clean up language titles
 			if (language !== null || language !== ""){
+				console.log("language");
 				if (language.toLowerCase() === "javascript"){
 					language = "JS";
 				} else if (language.toLowerCase() === "objective-c"){
