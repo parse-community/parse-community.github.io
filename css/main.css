@@ -853,7 +853,8 @@ section {
       .repoList .repoDescription {
         padding-left: 16px; } }
   .repoList .language {
-    text-align: right; }
+    text-align: right;
+    padding-right: 16px; }
   .repoList .repoInfo {
     height: 100%;
     right: 0px;
