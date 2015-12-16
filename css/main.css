@@ -654,6 +654,8 @@ section {
   position: relative;
   width: 100%;
   background: #ffffff; }
+  section .tableWrapper {
+    border-radius: 8px; }
   section table {
     width: 100%;
     max-width: 650px;
@@ -847,8 +849,7 @@ section {
     margin: 0px;
     opacity: 0.45;
     font-size: 14px;
-    font-family: "din";
-    line-height: 16px; }
+    font-family: "din"; }
     .repoList .metadata span {
       margin-right: 12px; }
   .repoList .repoDescription {
@@ -862,7 +863,9 @@ section {
         padding-left: 16px; } }
   .repoList .language {
     text-align: right;
-    padding-right: 16px; }
+    padding-right: 16px;
+    top: 2px;
+    position: relative; }
   .repoList .repoInfo {
     height: 100%;
     right: 0px;

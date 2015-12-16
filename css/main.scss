@@ -820,6 +820,9 @@ section{
     position: relative;
     width: 100%;
     background: $white;
+    .tableWrapper{
+        border-radius: 8px;
+    }
     table{
         width: 100%;
         max-width: 650px;
@@ -1063,7 +1066,6 @@ section{
         opacity: 0.45;
         font-size: 14px;
         font-family: "din";
-        line-height: 16px;
         span{
             margin-right: 12px;
         }
@@ -1081,6 +1083,8 @@ section{
     .language{
         text-align: right;
         padding-right: 16px;
+        top: 2px;
+        position: relative;
     }
     .repoInfo{
         height: 100%;
