@@ -659,7 +659,8 @@ section {
     max-width: 650px;
     margin: 0 auto; }
     section table td {
-      height: 72px; }
+      height: 72px;
+      max-width: 280px; }
   section:first-of-type {
     padding-top: 32px; }
   section:last-of-type {
@@ -844,10 +845,15 @@ section {
         padding-left: 16px; } }
   .repoList .repoDescription {
     margin: 0px;
-    padding-left: 24px; }
+    padding-left: 24px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
     @media screen and (max-width: 600px) {
       .repoList .repoDescription {
         padding-left: 16px; } }
+  .repoList .language {
+    text-align: right; }
   .repoList .repoInfo {
     height: 100%;
     right: 0px;

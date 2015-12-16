@@ -826,6 +826,7 @@ section{
         margin: 0 auto;
         td{
             height: 72px;
+            max-width: 280px;
         }
     }
     &:first-of-type{
@@ -1060,9 +1061,15 @@ section{
     .repoDescription{
         margin: 0px;
         padding-left: 24px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
         @media screen and (max-width: $smallWidth){
             padding-left: 16px;
         }
+    }
+    .language{
+        text-align: right;
     }
     .repoInfo{
         height: 100%;
