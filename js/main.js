@@ -39,10 +39,12 @@ $(document).ready(function(){
 			}
 
 			//clean up language titles
-			if (language.toLowerCase() === "javascript"){
-				language = "JS";
-			} else if (language.toLowerCase() === "objective-c"){
-				language = "Obj-C";
+			if (language !== null || language !== ""){
+				if (language.toLowerCase() === "javascript"){
+					language = "JS";
+				} else if (language.toLowerCase() === "objective-c"){
+					language = "Obj-C";
+				}
 			}
 
 			//keep tally of total forks, stars and repos
