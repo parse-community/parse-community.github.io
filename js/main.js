@@ -338,6 +338,7 @@ $(document).ready(function(){
 		$(".headerCenterContainer").css({"width": centerWidth + "px"});
 	}
 
+	fixVH();
 	$(window).load(function(){
 		fixVH();
 		headerAnimation();
