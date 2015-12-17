@@ -132,34 +132,6 @@ $(document).ready(function(){
 	$(".heroText .forkCount").text(totalForks);
 
 	  //====================================//
-	 // Get community projects from a parse class
-	//====================================//
-	//add new repo to the HTML
-	function addCommunityRepoToHTML(title, description, url){
-		$("section.community").append("<div class='repo'><div class='repoTitle'><h4>" + title + "</h4></div><div class='repoDescription'><p>" + description + "</p></div><div class='repoButton'><a href=" + url + " target='_blank'><button class='outline'>View on GitHub</button></a></div></div>");
-	}
-
-	//write this into the page
-	var communityRepos = Parse.Object.extend("CommunityRepos");
-	var query = new Parse.Query(communityRepos);
-	query.ascending("repoName");
-	query.find({
-		success: function(results) {
-		    // Do something with the returned Parse.Object values
-		    for (var i = 0; i < results.length; i++) {
-		      	var object 		= results[i];
-      			var title  		= object.get('repoName');
-      			var description = object.get('repoDescription');
-      			var url  		= object.get('repoURL');
-      			addCommunityRepoToHTML(title, description, url);
-		    }
-		},
-		error: function(error) {
-		    console.log("Error: " + error.code + " " + error.message);
-		}
-	});
-
-	  //====================================//
 	 //  expand/contract
 	//====================================//
 	$(".expandableRepoLink").click(function(){
@@ -441,5 +413,33 @@ $(document).ready(function(){
 	      		navindicatorTimeout = false;
 	      	} });
 	    }
+	});
+
+	  //====================================//
+	 // Get community projects from a parse class
+	//====================================//
+	//add new repo to the HTML
+	function addCommunityRepoToHTML(title, description, url){
+		$("section.community").append("<div class='repo'><div class='repoTitle'><h4>" + title + "</h4></div><div class='repoDescription'><p>" + description + "</p></div><div class='repoButton'><a href=" + url + " target='_blank'><button class='outline'>View on GitHub</button></a></div></div>");
+	}
+
+	//write this into the page
+	var communityRepos = Parse.Object.extend("CommunityRepos");
+	var query = new Parse.Query(communityRepos);
+	query.ascending("repoName");
+	query.find({
+		success: function(results) {
+		    // Do something with the returned Parse.Object values
+		    for (var i = 0; i < results.length; i++) {
+		      	var object 		= results[i];
+      			var title  		= object.get('repoName');
+      			var description = object.get('repoDescription');
+      			var url  		= object.get('repoURL');
+      			addCommunityRepoToHTML(title, description, url);
+		    }
+		},
+		error: function(error) {
+		    console.log("Error: " + error.code + " " + error.message);
+		}
 	});
 });
