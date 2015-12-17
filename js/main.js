@@ -328,9 +328,23 @@ $(document).ready(function(){
 			}, { queue: false, duration: 4400, easing: [0.39, 0.575, 0.565, 1]});
 		} });
 	}
+	//fix vw/vh units on mobile safari and old browsers
+	function fixVH(){
+		var rightWidth = $("img.headerRight").width();
+		var leftWidth = $("img.headerLeft").width();
+		var centerWidth = $("img.headerCenter").width();
+		$(".headerRightContainer").css({"width": rightWidth + "px"});
+		$(".headerLeftContainer").css({"width": leftWidth + "px"});
+		$(".headerCenterContainer").css({"width": centerWidth + "px"});
+	}
 
 	$(window).load(function(){
+		fixVH();
 		headerAnimation();
+	});
+
+	$(window).resize(function(){
+		fixVH();
 	});
 
 	  //====================================//
