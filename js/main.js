@@ -31,7 +31,7 @@ $(document).ready(function(){
 				stars 			= parseInt(gitJson[j].stargazers_count),
 				forks 			= parseInt(gitJson[j].forks_count),
 				language    	= gitJson[j].language,
-				sortDescription;
+				sortDescription = "";
 
 			// sortable description
 			if (description !== null && description !== ""){
