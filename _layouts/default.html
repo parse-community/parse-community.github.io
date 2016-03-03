@@ -11,7 +11,7 @@
         <meta property="og:title" content="Parse Open Source Hub"/>
         <meta property="og:description" content="The open source GitHub page for the Parse platform."/>
         <meta property="og:image" content="http://parseplatform.github.io/img/preview.png">
-        
+
         <link rel="icon" type="image/png" href="img/favicon/favicon-32x32.png" sizes="32x32">
         <link rel="icon" type="image/png" href="img/favicon/favicon-194x194.png" sizes="194x194">
         <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96">
@@ -23,7 +23,7 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <script src="https://www.parsecdn.com/js/parse-1.6.7.min.js"></script>
         <script>
-            var gitJson = {{ site.github.public_repositories | jsonify }}; 
+            var gitJson = {{ site.github.public_repositories | jsonify }};
         </script>
     </head>
     <body>
@@ -142,7 +142,7 @@
 						</div>
 						<img src="img/header/cranePivot.svg" alt="" class="cranePivot">
 					</div>
-					
+
 					<!--center animations-->
 					<img src="img/header/truckBackground.svg" alt="" class="headerCenter">
 					<div class="headerCenter headerCenterContainer">
@@ -155,16 +155,24 @@
         <div class="secondaryNav">
         	<div class="navBackground"></div>
         	<ul>
-        		<a href="#sdks" class="active"><li>SDKs</li></a>
-                <a href="#samples"><li>Samples</li></a>
-                <a href="#tutorials"><li>Tutorials</li></a>
-                <a href="#social"><li>Social</li></a>
-                <a href="#other"><li>Other</li></a>
-                <a href="#community"><li>Community</li></a>
+            <a href="#server" class="active"><li>Parse Server</li></a>
+            <a href="#sdks"><li>SDKs</li></a>
+            <a href="#samples"><li>Samples</li></a>
+            <a href="#tutorials"><li>Tutorials</li></a>
+            <a href="#social"><li>Social</li></a>
+            <a href="#other"><li>Other</li></a>
+            <a href="#community"><li>Community</li></a>
         	</ul>
         </div>
         <div class="wrapper">
             <div class="container">
+                <section class="parseServer" id="server">
+                    <h3>Parse Server</h3>
+                    <h6>The open source version of the Parse backend, and related projects</h6>
+                    <div class="tableWrapper">
+                        <table></table>
+                    </div>
+                </section>
                 <section class="SDKList" id="sdks">
                     <h3>SDKs and Libraries</h3>
                     <h6>The open source versions of our SDKs with relevant links to learn more.</h6>
@@ -297,7 +305,7 @@
                                     <a href="//github.com/ParsePlatform/ParseReact" target="_blank" class="ParseReact">
                                         <li>React</li>
                                     </a>
-                                    
+
                                 </ul>
                             </div>
                             <div class="repoButton">
