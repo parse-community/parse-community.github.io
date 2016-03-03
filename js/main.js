@@ -448,10 +448,6 @@ $(document).ready(function(){
 	}];
 
 	for (var i = 0; i < communityRepos.length; i++) {
-		var object 		= communityRepos[i];
-		var title  		= object.get('repoName');
-		var description = object.get('repoDescription');
-		var url  		= object.get('repoURL');
-		addCommunityRepoToHTML(title, description, url);
+		addCommunityRepoToHTML(communityRepos[i].title, communityRepos[i].description, communityRepos[i].url);
 	}
 });
