@@ -2,9 +2,6 @@
 /* global console */
 /* global gitJson */
 
-//initialize parse
-Parse.initialize("vc59bNX5cbtFv4Upaz4y31IJ6zOH5uKqJbRqoSgy", "jbMROx6VuQ6wVWRur29gYcQ7o3ucD4VYdh7DoFHj");
-
 //after page load
 $(document).ready(function(){
 	"use strict";
@@ -421,30 +418,40 @@ $(document).ready(function(){
 	});
 
 	  //====================================//
-	 // Get community projects from a parse class
+	 // Community projects, listed at the bottom
 	//====================================//
 	//add new repo to the HTML
 	function addCommunityRepoToHTML(title, description, url){
 		$("section.community").append("<div class='repo'><div class='repoTitle'><h4>" + title + "</h4></div><div class='repoDescription'><p>" + description + "</p></div><div class='repoButton'><a href=" + url + " target='_blank'><button class='outline'>View on GitHub</button></a></div></div>");
 	}
 
-	//write this into the page
-	var communityRepos = Parse.Object.extend("CommunityRepos");
-	var query = new Parse.Query(communityRepos);
-	query.ascending("repoName");
-	query.find({
-		success: function(results) {
-		    // Do something with the returned Parse.Object values
-		    for (var i = 0; i < results.length; i++) {
-		      	var object 		= results[i];
-      			var title  		= object.get('repoName');
-      			var description = object.get('repoDescription');
-      			var url  		= object.get('repoURL');
-      			addCommunityRepoToHTML(title, description, url);
-		    }
-		},
-		error: function(error) {
-		    console.log("Error: " + error.code + " " + error.message);
-		}
-	});
+	var communityRepos = [{
+		title: "Bolts Android",
+		description: "Collection of low-level libraries to make developing mobile apps easier.",
+		url: "https://github.com/BoltsFramework/Bolts-Android"
+	},{
+		title: "Bolts ObjC",
+		description: "Collection of low-level libraries to make developing mobile apps easier.",
+		url: "https://github.com/BoltsFramework/Bolts-iOS"
+	},{
+		title: "Parse Client in Go",
+		description: "Parse API Client Library written in Go.",
+		url: "https://github.com/kylemcc/parse"
+	},{
+		title: "Parse Ember Wrapper",
+		description: "Includes an adapter, serializer and a session service for auth.",
+		url: "https://github.com/GetBlimp/ember-parse"
+	},{
+		title: "Parse Python Wrapper",
+		description: "A Python wrapper for the Parse.com API.",
+		url: "https://github.com/dgrtwo/ParsePy"
+	}];
+
+	for (var i = 0; i < communityRepos.length; i++) {
+		var object 		= communityRepos[i];
+		var title  		= object.get('repoName');
+		var description = object.get('repoDescription');
+		var url  		= object.get('repoURL');
+		addCommunityRepoToHTML(title, description, url);
+	}
 });
