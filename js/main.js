@@ -9,7 +9,7 @@ Parse.initialize("vc59bNX5cbtFv4Upaz4y31IJ6zOH5uKqJbRqoSgy", "jbMROx6VuQ6wVWRur2
 $(document).ready(function(){
 	"use strict";
 	   //====================================//
-	  //  Use Jekyll Metadata to list the repos 
+	  //  Use Jekyll Metadata to list the repos
 	 // (except for community repos)
 	//====================================//
 	var totalStars = 0,
@@ -26,7 +26,7 @@ $(document).ready(function(){
 			var title 			= gitJson[j].name,
 				sortTitle 		= title.toLowerCase(),
 				url 			= gitJson[j].html_url,
-				hasIssues 		= gitJson[j].has_issues, 
+				hasIssues 		= gitJson[j].has_issues,
 				description 	= gitJson[j].description,
 				stars 			= parseInt(gitJson[j].stargazers_count),
 				forks 			= parseInt(gitJson[j].forks_count),
@@ -112,8 +112,13 @@ $(document).ready(function(){
 			} else if (sortTitle.includes("tutorial") === true || sortDescription.includes("tutorial")){
 				//write them to the page
 				addToSection($("section.tutorials table"), url, title, description, forks, stars, language);
+			//PARSE SERVER CATEGORY
+			//  if name parse-server, parse-dashboard
+		} else if (sortTitle.includes("parse-server") === true || sortDescription.includes("parse-dashboard")){
+				//write them to the page
+				addToSection($("section.parseServer table"), url, title, description, forks, stars, language);
 			//SAMPLES CATEGORY
-			//  if name todo, demo, any, scrumptious, store, f8, internetcar 
+			//  if name todo, demo, any, scrumptious, store, f8, internetcar
 			} else if (sortTitle.includes("todo") === true || sortTitle.includes("demo") === true || sortTitle.includes("any") === true || sortTitle.includes("store") === true || sortTitle.includes("f8") === true || sortTitle.includes("internetcar") === true || sortDescription.includes("example") || sortDescription.includes("sample")){
 				//write them to the page
 				addToSection($("section.sampleApps table"), url, title, description, forks, stars, language);
@@ -157,32 +162,32 @@ $(document).ready(function(){
 		 // Phone 1 (Left)
 		//
 		//move line down to grab video
-		$(".craneLine").velocity({ 
+		$(".craneLine").velocity({
 			translateY: [0, "-25%"],
 		}, { queue: false, duration: 600, easing: [ 0.4, 0, 0.2, 1 ], complete: function(){
 			//move line up and right to follow video
-			$(".craneLine").velocity({ 
+			$(".craneLine").velocity({
 				translateX: ["13%", 0],
 				translateY: ["-14.8%", 0]
 			}, { queue: false, duration: 600, delay: 200, easing: [ 0.4, 0, 0.2, 1 ] });
 			//move anchor pivot right
-			$(".cranePivot").velocity({ 
+			$(".cranePivot").velocity({
 				translateX: ["13%", 0]
 			}, { queue: false, duration: 600, delay: 200, easing: [ 0.4, 0, 0.2, 1 ] });
 			//move line + video onto the phone
-			$(".craneVideo").velocity({ 
+			$(".craneVideo").velocity({
 				translateY: ["-14.8%", 0],
 				translateX: ["13.4%", 0]
-			}, { queue: false, duration: 600, delay: 200, easing: [ 0.4, 0, 0.2, 1 ], complete: function(){ 
+			}, { queue: false, duration: 600, delay: 200, easing: [ 0.4, 0, 0.2, 1 ], complete: function(){
 				//move the line back up away from phone
-				$(".craneLine").velocity({ 
+				$(".craneLine").velocity({
 					translateY: ["-30%", "-14.8%"],
 				}, { queue: false, duration: 800, easing: [ 0.4, 0, 0.2, 1 ] });
 				//fade + animate in apps
 				var rectApps = $(".appRect"),
 					pathApps = $(".appSquare");
 				for (var p = 0; p < pathApps.length; p++) {
-					pathApps.eq(p).velocity({ 
+					pathApps.eq(p).velocity({
 						opacity: 1,
 						scale: [1, 0.45],
 						translateY: 0,
@@ -190,7 +195,7 @@ $(document).ready(function(){
 					}, { queue: false, duration: 600, delay: 100 * p + 400, easing: [ 0.175, 0.885, 0.320, 1.275 ] });
 				}
 				for (var r = 0; r < rectApps.length; r++) {
-					rectApps.eq(r).velocity({ 
+					rectApps.eq(r).velocity({
 						opacity: 1,
 						scale: [1, 0.45],
 						translateY: 0,
@@ -198,7 +203,7 @@ $(document).ready(function(){
 					}, { queue: false, duration: 600, delay: ((100 * r) + (100 * p) + 400), easing: [ 0.175, 0.885, 0.320, 1.275 ] });
 				}
 				//turn screen on
-				$(".phone1ScreenContainer").velocity({ 
+				$(".phone1ScreenContainer").velocity({
 					backgroundColor: "#EF3F61"
 				}, { queue: false, duration: 600, easing: [ 0.4, 0, 0.2, 1 ] });
 			} });
@@ -209,38 +214,38 @@ $(document).ready(function(){
 		//
 		//move middle line to grab push icon
 		var pushIconTranslate = "-" + ($(".middleLineOne").height() / $(".pushOne").height() * 100) + "%";
-		$(".middleLineOne").velocity({ 
+		$(".middleLineOne").velocity({
 			translateY: [0, "-105%"],
 		}, { queue: false, duration: 1200, delay: 800, easing: [ 300, 28 ], complete: function(){
 			//rotate the push icon and pull it up
-			$(".pushOne").velocity({ 
+			$(".pushOne").velocity({
 				translateY: [pushIconTranslate, 0]
 			}, { queue: false, duration: 800, easing: [ 0.4, 0, 0.2, 1 ] })
 			//rotate push icon
-			.velocity({ 
+			.velocity({
 				rotateZ: ["12deg", "0deg"],
 			}, { queue: false, duration: 300, easing: [ 0.4, 0, 0.2, 1 ] });
 			//lift the line back up
-			$(".middleLineOne").velocity({ 
+			$(".middleLineOne").velocity({
 				translateY: ["-100%", 0],
 			}, { queue: false, duration: 800, easing: [ 0.4, 0, 0.2, 1 ], complete: function(){
 				//put the icon on the phone screen
-				$(".middleLine2, .push2").velocity({ 
+				$(".middleLine2, .push2").velocity({
 					y: [0, "-125%"],
 				}, { queue: false, duration: 1000, delay: 200, easing: [ 300, 28 ], complete: function(){
 					//pull the line back up
-					$(".middleLine2").velocity({ 
+					$(".middleLine2").velocity({
 						y: ["-125%", 0],
 					}, { queue: false, duration: 1000, delay: 200, easing: [ 300, 28 ] });
 					//turn phone screen on
-					$(".phone2Screen .phoneCircle").velocity({ 
+					$(".phone2Screen .phoneCircle").velocity({
 						scale: [1, 0]
 					}, { queue: false, duration: 350, easing: [ 0.25, 0.46, 0.45, 0.94 ] });
-					$(".phone2Screen").velocity({ 
+					$(".phone2Screen").velocity({
 						backgroundColor: "#4BBC6E"
 					}, { queue: false, duration: 150, delay: 200, easing: [ 0.4, 0, 0.2, 1 ] });
 					//change icon color
-					$(".push2 path").velocity({ 
+					$(".push2 path").velocity({
 						fill: "#40a05b"
 					}, { queue: false, duration: 200, easing: [ 0.4, 0, 0.2, 1 ] });
 				} });
@@ -255,11 +260,11 @@ $(document).ready(function(){
 			var scaleRatio = 1;
 			if (browserWidth >= 1480){
 				scaleRatio = 0.75;
-				$(".wheelsContainer, .hoist, .hoistParts").velocity({ 
+				$(".wheelsContainer, .hoist, .hoistParts").velocity({
 					scale: 		[scaleRatio, scaleRatio]
 				}, { queue: false, duration: 0 });
 			} else {
-				$(".wheelsContainer, .hoist, .hoistParts").velocity({ 
+				$(".wheelsContainer, .hoist, .hoistParts").velocity({
 					scale: 		[scaleRatio, scaleRatio]
 				}, { queue: false, duration: 0 });
 			}
@@ -270,32 +275,32 @@ $(document).ready(function(){
 		setupScale();
 
 		//move wheels with the hoist
-		$(".wheelsContainer").velocity({ 
+		$(".wheelsContainer").velocity({
 			translateX: [0, "100%"],
 		}, { queue: false, duration: 4400, easing: [0.39, 0.575, 0.565, 1] });
 		//drive in the hoist
-		$(".hoist, .hoistParts").velocity({ 
+		$(".hoist, .hoistParts").velocity({
 			translateX: [0, "100%"],
 		}, { queue: false, duration: 4400, easing: [0.39, 0.575, 0.565, 1], complete: function(){
 			//turn screen on
-			$(".phone3Screen .phoneCircle").velocity({ 
+			$(".phone3Screen .phoneCircle").velocity({
 				scale: [1, 0]
 			}, { queue: false, duration: 350, easing: [ 0.25, 0.46, 0.45, 0.94 ] });
-			$(".phone3Screen").velocity({ 
+			$(".phone3Screen").velocity({
 				backgroundColor: "#555574"
 			}, { queue: false, duration: 150, delay: 200, easing: [ 0.4, 0, 0.2, 1 ] });
-			$(".analytics path").velocity({ 
+			$(".analytics path").velocity({
 				fill: "#3A3A59"
 			}, { queue: false, duration: 200, easing: [ 0.4, 0, 0.2, 1 ] });
 
 			//lift hoist line up
-			$(".hoistLineInner").velocity({ 
+			$(".hoistLineInner").velocity({
 				y: ["-22%", 0]
 			}, { queue: false, duration: 800, easing: [ 0.4, 0, 0.2, 1 ] });
 
 		}, begin: function(){
 			//turn hoist wheels
-			$(".hoistWheel").velocity({ 
+			$(".hoistWheel").velocity({
 				rotateZ: ["-=720deg"],
 			}, { queue: false, duration: 4400, easing: [0.39, 0.575, 0.565, 1]});
 		} });
@@ -368,7 +373,7 @@ $(document).ready(function(){
 					$(".secondaryNav ul a").eq(s).addClass("active");
 				}
 			}
-			
+
 	    }
 	}
 
