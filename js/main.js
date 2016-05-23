@@ -432,7 +432,12 @@ $(document).ready(function(){
 	},{
 		title: "Bolts ObjC",
 		description: "Collection of low-level libraries to make developing mobile apps easier.",
-		url: "https://github.com/BoltsFramework/Bolts-iOS"
+		url: "https://github.com/BoltsFramework/Bolts-ObjC"
+	},
+	{
+		title: "Bolts Swift",
+		description: "Collection of low-level libraries to make developing mobile apps easier.",
+		url: "https://github.com/BoltsFramework/Bolts-Swift"
 	},{
 		title: "Parse Client in Go",
 		description: "Parse API Client Library written in Go.",
