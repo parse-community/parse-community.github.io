@@ -1,38 +1,32 @@
-<footer class="site-footer">
-
-  <div class="wrapper">
-
-    <h2 class="footer-heading">{{ site.title }}</h2>
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
-        <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-2">
-        <ul class="social-media-list">
-          {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
-          </li>
-          {% endif %}
-
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-        </ul>
-      </div>
-
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
+<footer>
+    <div class="container">
+      <img src="img/openSourceIllustration.svg" alt="Parse open source illustration" class="footerImage">
+        <div class="needHelp">
+            <h5>Need Help?</h5>
+            <p><a href="{{ site.support_url }}" target="_blank">Get Support</a></p>
+        </div>
+        <div class="socialLinks">
+            <h5>Stay Connected</h5>
+            <div class="socialIcons">
+                <a href="https://www.facebook.com/{{ site.facebook_username }}" target="_blank"><img src="img/facebook.svg" alt="">
+                <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank"><img src="img/twitter.svg" alt=""></a>
+                <a href="https://github.com/{{ site.github_username }}" target="_blank"><img src="img/github.svg" alt=""></a>
+                <a href="http://stackoverflow.com/tags/{{ site.stackoverflow_tag }}" target="_blank"><img src="img/overflow.svg" alt=""></a>
+            </div>
+        </div>
     </div>
-
-  </div>
-
 </footer>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-23813809-2', 'auto');
+  ga('send', 'pageview');
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
