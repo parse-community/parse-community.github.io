@@ -1,3 +1,22 @@
+# Parse Open Source Hub on GitHub Pages
+
+## Setup
+
+To run the site locally, you'll need Jekyll and the GitHub Pages gem. The GH Pages gem is required to provide your local site with a similar environment to prod. For example, the `site.github` param is [automatically provided by GitHub](https://help.github.com/articles/repository-metadata-on-github-pages/) in prod.
+
+### Prerequesites
+
+* Ruby 2.0.0 or higher
+* Jekyll 3 or higher
+* Bundler (`gem install bundler`)
+
+### Running
+
+```
+bundle install
+bundle exec jekyll serve
+```
+
 ## Rendering logic
 
 1. All metadata pulled in via Jekyll as json

@@ -12,6 +12,7 @@ email: community@parse.com
 description: The open source GitHub page for the Parse platform.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://parseplatform.github.io/" # the base hostname & protocol for your site
+repository: parseplatform/parseplatform.github.io
 facebook_username: parseit
 twitter_username:  parseit
 github_username:   parseplatform
@@ -21,4 +22,4 @@ support_url: https://www.parse.com/help
 
 # Build settings
 markdown: kramdown
-exclude: [ README.md, config.codekit ]
+exclude: [ Gemfile, Gemfile.lock, README.md, config.codekit ]
