@@ -18,6 +18,10 @@ $(document).ready(function(){
 		sectionTitle.append("<tr class='repoList'><td><a href='" + url + "' target='_blank'><h4>" + title + "</h4><p class='repoDescription'>" + description + "</p></td><td class='language metadata'>" + language + "</a></td><td class='metadata'><img src='img/starsDark.svg' alt='' class='icon'>" + stars + "</td><td class='metadata'><img src='img/forksDark.svg' alt='' class='icon'>" + forks + "</td></tr>");
 	}
 
+	function addNonRepoToSection(sectionTitle, url, title, description, forks, stars, language){
+		sectionTitle.append("<tr class='repoList'><td colspan='4'><a href='" + url + "' target='_blank'><h4>" + title + "</h4><p class='repoDescription'>" + description + "</p></td></tr>");
+	}
+
 	if (typeof gitJson !== 'undefined'){
 		for (var j = 0; j < gitJson.length; j++) {
 			var title 			= gitJson[j].name,
@@ -126,6 +130,8 @@ $(document).ready(function(){
 				addToSection($("section.other table"), url, title, description, forks, stars, language);
 			}
 		}
+
+		addNonRepoToSection($("section.parseServer table"), "https://github.com/parse-server-modules", "parse-server-modules", "Community Organization for non-core Parse Server modules and adapters");
 	}
 
 	//write total forks, stars and repos into the page
