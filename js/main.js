@@ -456,6 +456,10 @@ $(document).ready(function(){
 		title: "Parse Python Wrapper",
 		description: "A Python wrapper for the Parse.com API.",
 		url: "https://github.com/dgrtwo/ParsePy"
+	},{
+		title: "Parse Client in Ruby",
+		description: "An object-relational mapper and cloud code webhooks server.",
+		url: "https://github.com/modernistik/parse-stack"
 	}];
 
 	for (var i = 0; i < communityRepos.length; i++) {
