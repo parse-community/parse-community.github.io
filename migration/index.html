@@ -6,11 +6,11 @@ slug: Parse + Migration Guide
 
                 <div class="col-md--4 offset-md--1 col-lg--5 offset-lg--2">
                   <h1 style="margin-bottom: 20px">Migration Guide (Archive)</h1>
-                    <p>As <a href="http://blog.parse.com/announcements/moving-on/">we previously shared</a>, the Parse service was shut down on January 30, 2017.</p>
+                    <p>As <a href="http://blog.parseplatform.org/announcements/moving-on/">we previously shared</a>, the Parse service was shut down on January 30, 2017.</p>
 
                     <p>You will not be able to export or access your data in any way after your app is disabled on January 30, 2017. This document will guide you through the steps needed to set up your own open-source <a href="http://parseplatform.github.io/docs/parse-server/guide/">Parse Server</a>. At this point, it is no longer possible to migrate a Parse.com database.</p>
 
-                    <p>This migration guide assumes the use of Heroku and either <a href="http://docs.mlab.com/migrating-from-parse/" target="_blank">mLab</a> or <a href="https://objectrocket.com/parse" target="_blank">ObjectRocket</a>. These three services are easy to use, especially if you are new to deploying and managing your own backend stack. But, you can elect to use <a href="https://github.com/ParsePlatform/parse-server/wiki#community-links" target="_blank">any infrastructure provider</a> that supports Node.js environments.</p>
+                    <p>This migration guide assumes the use of Heroku and either <a href="http://docs.mlab.com/migrating-from-parse/" target="_blank">mLab</a> or <a href="https://objectrocket.com/parse" target="_blank">ObjectRocket</a>. These three services are easy to use, especially if you are new to deploying and managing your own backend stack. But, you can elect to use <a href="https://github.com/parse-community/parse-server/wiki#community-links" target="_blank">any infrastructure provider</a> that supports Node.js environments.</p>
 
                     <p>After completion, you will have the following:</p>
 
@@ -43,13 +43,13 @@ slug: Parse + Migration Guide
 
                     <h2>1. Migrate Parse DB to Self-Hosted MongoDB</h2>
 
-                    <p>Set up a MongoDB instance that conforms to our <a href="https://github.com/ParsePlatform/parse-server/wiki/Parse-Server-Guide#database">database specifications</a>. If this is your first time setting up a production MongoDB instance, we recommend using either mLab or ObjectRocket. These are database-as-a-service companies which provide fully managed MongoDB instances, and can help you scale up as needed.</p>
+                    <p>Set up a MongoDB instance that conforms to our <a href="https://github.com/parse-community/parse-server/wiki/Parse-Server-Guide#database">database specifications</a>. If this is your first time setting up a production MongoDB instance, we recommend using either mLab or ObjectRocket. These are database-as-a-service companies which provide fully managed MongoDB instances, and can help you scale up as needed.</p>
 
                     <p>Once you have Mongo set up, take note of the Mongo connection URL. Use the database migration tool to transfer your data. The database migration tool can be found in the <a href="https://dashboard.parse.com/apps">Dashboard</a> under <em>App Settings</em> → <em>General</em> → <em>Migrate to external database</em>.</p>
 
                     <ul>
                     <li><p><strong>Make sure to size your MongoDB at least 3x.</strong> Due to data being compressed in the hosted Parse database, make sure to size your Mongo at least 3X the current amount of data storage you are using (you can find this information in your hosted Parse app's Analytics overview page).</p></li>
-                    <li><p><strong>Ensure the user in the connection string has <a href="https://docs.mongodb.org/manual/tutorial/manage-users-and-roles/">admin privileges</a>.</strong> If the user in the connection string does not have admin privileges, you will need to set the <code>failIndexKeyTooLong</code> parameter to <code>false</code> yourself prior to the migration. You can configure it back to <code>true</code> after the migration is completed. (<a href="https://github.com/ParsePlatform/parse-server/wiki/Parse-Server-Guide#why-do-i-need-to-set-failindexkeytoolongfalse">Why?</a>)</p></li>
+                    <li><p><strong>Ensure the user in the connection string has <a href="https://docs.mongodb.org/manual/tutorial/manage-users-and-roles/">admin privileges</a>.</strong> If the user in the connection string does not have admin privileges, you will need to set the <code>failIndexKeyTooLong</code> parameter to <code>false</code> yourself prior to the migration. You can configure it back to <code>true</code> after the migration is completed. (<a href="https://github.com/parse-community/parse-server/wiki/Parse-Server-Guide#why-do-i-need-to-set-failindexkeytoolongfalse">Why?</a>)</p></li>
                     <li>
                     <p><strong>Latency between Parse and your self-hosted MongoDB should not exceed 20ms.</strong> We recommend choosing either <a href="http://docs.mLab.com/migrating-from-parse/">mLab</a> or <a href="https://objectrocket.com/parse">ObjectRocket</a> for your hosted MongoDB as they both have datacenters in the US East geographic region.</p>
 
@@ -108,7 +108,7 @@ slug: Parse + Migration Guide
                       <li>
                       <strong>The mongo user provided is not authorized to do migration.</strong> The user in the connection string doesn't have the necessary access to complete the migration.</li>
                       <li>
-                      <strong>You must set failIndexKeyTooLong option.</strong> You need to set the <code>failIndexKeyTooLong</code> setting of your mongo server to false.(<a href="https://github.com/ParsePlatform/parse-server/wiki/Parse-Server-Guide#why-do-i-need-to-set-failindexkeytoolongfalse">Why?</a>)</li>
+                      <strong>You must set failIndexKeyTooLong option.</strong> You need to set the <code>failIndexKeyTooLong</code> setting of your mongo server to false.(<a href="https://github.com/parse-community/parse-server/wiki/Parse-Server-Guide#why-do-i-need-to-set-failindexkeytoolongfalse">Why?</a>)</li>
                       <li>
                       <strong>The job failed too many times and reached the max retry limit.</strong> The job failed several times and we gave up trying. One possible reason can be that your database hardware cannot handle the migration load. If you have large collections (containing more than 1 million objects), please consider upgrading your database hardware. During the migration the system throughput is much higher than normal, so it requires better hardware. You can resize your host after the migration is done.</li>
                       <li>
@@ -134,11 +134,11 @@ slug: Parse + Migration Guide
 
                     <h1 style="margin-bottom: 20px">Setting up Parse Server</h1>
 
-                    <p>There are a few areas where Parse Server does not provide compatibility with the Parse hosted backend. Carefully read through the list of <a href="https://github.com/ParsePlatform/parse-server/wiki/Compatibility-with-Hosted-Parse">compatibility issues with hosted Parse</a> before proceeding.</p>
+                    <p>There are a few areas where Parse Server does not provide compatibility with the Parse hosted backend. Carefully read through the list of <a href="https://github.com/parse-community/parse-server/wiki/Compatibility-with-Hosted-Parse">compatibility issues with hosted Parse</a> before proceeding.</p>
 
                     <h2>2. Set Up Local Parse Server</h2>
 
-                    <p>Follow the instructions in the <a href="https://github.com/ParsePlatform/parse-server-example">Parse Server Sample App</a> and use the Mongo connection string from Step 1.</p>
+                    <p>Follow the instructions in the <a href="https://github.com/parse-community/parse-server-example">Parse Server Sample App</a> and use the Mongo connection string from Step 1.</p>
 
                     <p>Go to the Security &amp; Keys section of App Settings in your <a href="https://dashboard.parse.com">Dashboard</a> and take note of the File Key and Master Key values. Pass that into the ParseServer constructor in <code>index.js</code>. You no longer need to use a client key with Parse Server.</p>
 
@@ -163,7 +163,7 @@ curl -X GET \
 
                     <h2>3. Cloud Code</h2>
 
-                    <p>We will now migrate your existing Cloud Code to run in Parse Server. Copy your app’s Cloud Code to the <code>parse-server/cloud</code> directory, replacing the example <code>main.js</code>. You will need to replace any relative paths like <code>'cloud/…'</code> to <code>'./cloud'</code>. The <code>Parse.Cloud.useMasterKey()</code> method, <code>Parse.User.current()</code> method, and native <a href="/docs/cloudcode/guide#cloud-code-modules">Parse.com Cloud Code modules</a> are not available in Parse Server. See our <a href="https://github.com/ParsePlatform/Parse-Server/wiki/Compatibility-with-Hosted-Parse#Cloud-Code">compatibility guide</a> to see a list of workarounds.</p>
+                    <p>We will now migrate your existing Cloud Code to run in Parse Server. Copy your app’s Cloud Code to the <code>parse-server/cloud</code> directory, replacing the example <code>main.js</code>. You will need to replace any relative paths like <code>'cloud/…'</code> to <code>'./cloud'</code>. The <code>Parse.Cloud.useMasterKey()</code> method, <code>Parse.User.current()</code> method, and native <a href="/docs/cloudcode/guide#cloud-code-modules">Parse.com Cloud Code modules</a> are not available in Parse Server. See our <a href="https://github.com/parse-community/Parse-Server/wiki/Compatibility-with-Hosted-Parse#Cloud-Code">compatibility guide</a> to see a list of workarounds.</p>
 
                     <h3>Verification</h3>
 
@@ -188,7 +188,7 @@ app.get('/about', aboutController.index);
 
                     <h2>5. Files</h2>
 
-                    <p>When using Parse Server, any new file you create will be saved on <a href="http://blog.parse.com/announcements/hosting-files-on-parse-server/">the data store you select through the files adapter</a> (MongoDB, S3, ...). All of your existing files will remain in Parse's hosted service. As long as you specify the correct <code>fileKey</code>, Parse Server knows exactly how to access them, so they will keep working just fine.</p>
+                    <p>When using Parse Server, any new file you create will be saved on <a href="http://blog.parseplatform.org/announcements/hosting-files-on-parse-server/">the data store you select through the files adapter</a> (MongoDB, S3, ...). All of your existing files will remain in Parse's hosted service. As long as you specify the correct <code>fileKey</code>, Parse Server knows exactly how to access them, so they will keep working just fine.</p>
 
                     <p>Please be aware that new files that are uploaded to Parse Server will <em>not be accessible to older clients that use <code>api.parse.com</code></em> as the hosted Parse server only supports serving static files from its own S3 bucket.</p>
 
@@ -224,7 +224,7 @@ app.get('/about', aboutController.index);
 
                     <h2>7. Point Client to Local Parse Server</h2>
 
-                    <p>Update your app with the latest version of the Parse SDK (at least version 1.12 for iOS, 1.13.0 for Android, 1.6.14 for JS, 1.7.0 for .NET), which <a href="https://github.com/ParsePlatform/parse-server/wiki/Parse-Server-Guide#using-parse-sdks-with-parse-server">have the ability to change the server URL</a>.</p>
+                    <p>Update your app with the latest version of the Parse SDK (at least version 1.12 for iOS, 1.13.0 for Android, 1.6.14 for JS, 1.7.0 for .NET), which <a href="https://github.com/parse-community/parse-server/wiki/Parse-Server-Guide#using-parse-sdks-with-parse-server">have the ability to change the server URL</a>.</p>
 
                     <h2>8. Checkpoint: Test Your App</h2>
 
@@ -243,7 +243,7 @@ app.get('/about', aboutController.index);
 
                   <h2>9. Set Up Parse Server on Heroku or another infrastructure provider.</h2>
 
-                  <p>Follow the instructions for <a href="https://github.com/ParsePlatform/parse-server/wiki/Deploying-Parse-Server#deploying-to-heroku-and-mLab">deploying the server to Heroku</a>, <a href="https://nodechef.com/blog/post/6/migrate-from-parse-to-nodechef%E2%80%99s-managed-parse-server">NodeChef</a>, <a href="http://mobile.awsblog.com/post/TxCD57GZLM2JR/How-to-set-up-Parse-Server-on-AWS-using-AWS-Elastic-Beanstalk">AWS</a>, <a href="https://www.digitalocean.com/community/tutorials/how-to-run-parse-server-on-ubuntu-14-04">Digital Ocean</a>, <a href="https://cloud.google.com/nodejs/resources/frameworks/parse-server">Google Cloud Platform</a>, <a href="https://azure.microsoft.com/en-us/blog/azure-welcomes-parse-developers/">Azure</a>, or <a href="https://github.com/ParsePlatform/parse-server/wiki#community-links">any other infrastucture provider</a>.</p>
+                  <p>Follow the instructions for <a href="https://github.com/parse-community/parse-server/wiki/Deploying-Parse-Server#deploying-to-heroku-and-mLab">deploying the server to Heroku</a>, <a href="https://nodechef.com/blog/post/6/migrate-from-parse-to-nodechef%E2%80%99s-managed-parse-server">NodeChef</a>, <a href="http://mobile.awsblog.com/post/TxCD57GZLM2JR/How-to-set-up-Parse-Server-on-AWS-using-AWS-Elastic-Beanstalk">AWS</a>, <a href="https://www.digitalocean.com/community/tutorials/how-to-run-parse-server-on-ubuntu-14-04">Digital Ocean</a>, <a href="https://cloud.google.com/nodejs/resources/frameworks/parse-server">Google Cloud Platform</a>, <a href="https://azure.microsoft.com/en-us/blog/azure-welcomes-parse-developers/">Azure</a>, or <a href="https://github.com/parse-community/parse-server/wiki#community-links">any other infrastucture provider</a>.</p>
 
                   <h2>10. Point Client to Parse Server</h2>
 

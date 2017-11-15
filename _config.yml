@@ -8,17 +8,16 @@
 # Site settings
 name: Parse Open Source Hub
 title: Parse + Open Source = ❤️
-email: community@parse.com
+email: community@parseplatform.org
 description: The open source GitHub page for the Parse platform.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://parseplatform.github.io/" # the base hostname & protocol for your site
 repository: parseplatform/parseplatform.github.io
 facebook_username: parseit
 twitter_username:  parseit
-github_username:   parseplatform
+github_username:   parse-community
 stackoverflow_tag: parse.com
 serverfault_tag:   parse
-support_url: https://www.parse.com/help
 
 # Build settings
 markdown: kramdown
