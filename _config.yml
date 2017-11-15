@@ -15,7 +15,7 @@ url: "https://parseplatform.github.io/" # the base hostname & protocol for your 
 repository: parseplatform/parseplatform.github.io
 facebook_username: parseit
 twitter_username:  parseit
-github_username:   parseplatform
+github_username:   parse-community
 stackoverflow_tag: parse.com
 serverfault_tag:   parse
 support_url: https://www.parse.com/help
