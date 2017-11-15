@@ -11,8 +11,8 @@ title: Parse + Open Source = ❤️
 email: community@parseplatform.org
 description: The open source GitHub page for the Parse platform.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://parseplatform.org/" # the base hostname & protocol for your site
-repository: parseplatform/parseplatform.github.io
+url: "http://parseplatform.org/" # the base hostname & protocol for your site
+repository: parse-community/parse-community.github.io
 facebook_username: parseit
 twitter_username:  parseplatform
 github_username:   parse-community
