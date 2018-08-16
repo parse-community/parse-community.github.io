@@ -105,7 +105,7 @@ h3 {
   line-height: 32px;
   color: #169CEE;
   font-family: 'alrightRegular';
-  letter-spacing: -0.4px;
+  letter-spacing: -0.2px;
   margin: 48px 0px 10px 0px;
   text-align: center;
   font-weight: 600; }
@@ -192,6 +192,10 @@ button, .button {
     button.outline:hover, .button.outline:hover {
       background: #169CEE;
       color: #ffffff; }
+  button.large, .button.large {
+    font-family: 'alrightRegular';
+    text-transform: uppercase;
+    font-size: 18px; }
 
 nav {
   position: absolute;
@@ -360,15 +364,15 @@ nav {
     .headerIllustration .headerLeftContainer .phone1ScreenContainer {
       position: absolute;
       background: #555574;
-      left: 50.9090909091%;
-      width: 20.1136363636%;
+      left: 50.90909%;
+      width: 20.11364%;
       height: 24.21875%;
       bottom: 3.28125%; }
       .headerIllustration .headerLeftContainer .phone1ScreenContainer .appSquare {
         position: absolute;
-        width: 24.8587570621%;
-        height: 14.1935483871%;
-        top: 56.1290322581%;
+        width: 24.85876%;
+        height: 14.19355%;
+        top: 56.12903%;
         background: #DB3B61;
         border-radius: 20%;
         transform: scale(0.45);
@@ -376,11 +380,11 @@ nav {
         transform: rotateZ(90deg) scale(0.45);
         opacity: 0; }
         .headerIllustration .headerLeftContainer .phone1ScreenContainer .appSquare.one {
-          left: 6.7796610169%; }
+          left: 6.77966%; }
         .headerIllustration .headerLeftContainer .phone1ScreenContainer .appSquare.two {
-          left: 37.2881355932%; }
+          left: 37.28814%; }
         .headerIllustration .headerLeftContainer .phone1ScreenContainer .appSquare.three {
-          left: 67.7966101695%; }
+          left: 67.79661%; }
       .headerIllustration .headerLeftContainer .phone1ScreenContainer .appRect {
         transform: scale(0.45);
         transform-origin: 50% 50%;
@@ -388,15 +392,15 @@ nav {
         opacity: 0;
         background: #DB3B61;
         position: absolute;
-        left: 6.7796610169%;
-        width: 85.8757062147%;
-        height: 4.8387096774%; }
+        left: 6.77966%;
+        width: 85.87571%;
+        height: 4.83871%; }
         .headerIllustration .headerLeftContainer .phone1ScreenContainer .appRect.one {
-          top: 74.1935483871%; }
+          top: 74.19355%; }
         .headerIllustration .headerLeftContainer .phone1ScreenContainer .appRect.two {
-          top: 82.2580645161%; }
+          top: 82.25806%; }
         .headerIllustration .headerLeftContainer .phone1ScreenContainer .appRect.three {
-          top: 90.3225806452%; }
+          top: 90.32258%; }
   .headerIllustration .headerCenter {
     left: 0px;
     right: 0px;
@@ -413,10 +417,10 @@ nav {
     width: 41.625vh; }
     .headerIllustration .headerCenterContainer .pushOne {
       position: absolute;
-      left: 6.9444444444%;
+      left: 6.94444%;
       bottom: 6.71875%;
       height: auto;
-      width: 15.5555555556%;
+      width: 15.55556%;
       transform-origin: 25% 0%; }
     .headerIllustration .headerCenterContainer .middleLineOne {
       position: absolute;
@@ -470,8 +474,8 @@ nav {
       transform: translateX(100%); }
     .headerIllustration .headerRightContainer .hoistWheel {
       position: absolute;
-      width: 3.7909836066%;
-      height: 2.890625%;
+      width: 3.79098%;
+      height: 2.89063%;
       bottom: 1.25%; }
       .headerIllustration .headerRightContainer .hoistWheel:nth-of-type(1) {
         right: 1.71875%; }
@@ -488,9 +492,9 @@ nav {
       border-radius: 50%; }
     .headerIllustration .headerRightContainer .phone2Screen {
       position: absolute;
-      left: 20.2868852459%;
-      bottom: 4.921875%;
-      width: 22.9508196721%;
+      left: 20.28689%;
+      bottom: 4.92188%;
+      width: 22.95082%;
       height: 29.53125%;
       background: #555574;
       overflow: hidden; }
@@ -505,9 +509,9 @@ nav {
         transform: scale(0); }
     .headerIllustration .headerRightContainer .phone3Screen {
       position: absolute;
-      left: 37.9098360656%;
-      bottom: 5.234375%;
-      width: 22.131147541%;
+      left: 37.90984%;
+      bottom: 5.23438%;
+      width: 22.13115%;
       height: 22.65625%;
       background: #3A3A59;
       overflow: hidden; }
@@ -963,3 +967,5 @@ footer {
       margin-top: 48px; }
     footer .socialLinks {
       margin-top: 32px; } }
+
+/*# sourceMappingURL=main.css.map */
