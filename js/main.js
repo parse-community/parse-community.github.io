@@ -15,7 +15,7 @@ $(document).ready(function(){
 
 	//render repo to page
 	function addToSection(sectionTitle, url, title, description, forks, stars, language){
-		sectionTitle.append("<tr class='repoList'><td><a href='" + url + "' target='_blank'><h4>" + title + "</h4><p class='repoDescription'>" + description + "</p></td><td class='language metadata'>" + language + "</a></td><td class='metadata'><img src='img/starsDark.svg' alt='' class='icon'>" + stars + "</td><td class='metadata'><img src='img/forksDark.svg' alt='' class='icon'>" + forks + "</td></tr>");
+		 sectionTitle.append("<tr class='repoList'><td><a href='" + url + "' target='_blank'><h4>" + title + "</h4><p class='repoDescription'>" + description + "</p></td><td class='language metadata'>" + language + "</a></td><td class='metadata'><img src='img/starsDark.svg' alt='' class='icon'>" + stars + "</td><td class='metadata'><img src='img/forksDark.svg' alt='' class='icon'>" + forks + "</td></tr>");
 	}
 
 	function addNonRepoToSection(sectionTitle, url, title, description, forks, stars, language){
@@ -23,6 +23,10 @@ $(document).ready(function(){
 	}
 
 	if (typeof gitJson !== 'undefined'){
+		// Sort the gitJson by popularity
+		gitJson = gitJson.sort(function (a, b) {
+			return parseInt(a.stargazers_count) < parseInt(b.stargazers_count);
+		});
 		for (var j = 0; j < gitJson.length; j++) {
 			var title 			= gitJson[j].name,
 				sortTitle 		= title.toLowerCase(),
@@ -115,9 +119,13 @@ $(document).ready(function(){
 				addToSection($("section.tutorials table"), url, title, description, forks, stars, language);
 			//PARSE SERVER CATEGORY
 			//  if name parse-server, parse-dashboard
-		} else if (sortTitle.includes("parse-server") === true || sortDescription.includes("parse-dashboard")){
+			} else if (sortTitle === "parse-server" || sortTitle === "parse-dashboard"){
 				//write them to the page
 				addToSection($("section.parseServer table"), url, title, description, forks, stars, language);
+			//ADAPTERS REPOSITORIES
+			} else if (sortTitle.includes("parse-server") === true || sortTitle.includes("parse-dashboard")){
+				//write them to the page
+				addToSection($("section.parseServerAdapters table"), url, title, description, forks, stars, language);
 			//SAMPLES CATEGORY
 			//  if name todo, demo, any, scrumptious, store, f8, internetcar
 			} else if (sortTitle.includes("todo") === true || sortTitle.includes("demo") === true || sortTitle.includes("any") === true || sortTitle.includes("store") === true || sortTitle.includes("f8") === true || sortTitle.includes("internetcar") === true || sortDescription.includes("example") || sortDescription.includes("sample")){
@@ -125,8 +133,7 @@ $(document).ready(function(){
 				addToSection($("section.sampleApps table"), url, title, description, forks, stars, language);
 			//OTHER CATEGORY
 			//   ...everything else
-			} else {
-				//write them to the page
+			} else if (description) {
 				addToSection($("section.other table"), url, title, description, forks, stars, language);
 			}
 		}
