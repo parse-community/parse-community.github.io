@@ -307,9 +307,10 @@ nav {
       .header .heroText {
         position: absolute;
         top: 24%; } }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-height: 900px) {
     .header {
-      height: 54%; }
+      height: 900px; } }
+  @media screen and (max-width: 600px) {
       .header .container {
         height: 100%; }
       .header .headerIllustration .headerLeftContainer {
@@ -631,9 +632,10 @@ nav {
     .secondaryNav.shown .navBackground {
       transform: translateY(0px);
       transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-height: 900px) {
     .secondaryNav {
-      top: 54%; }
+      top: 900px; } }
+  @media screen and (max-width: 600px) {
       .secondaryNav ul li {
         font-size: 14px;
         letter-spacing: 0.1; } }
