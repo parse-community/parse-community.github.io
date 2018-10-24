@@ -377,7 +377,7 @@ nav{
  // Header
 //==========================================//
 $headerheight: 74%;
-$headerheightSmall: 54%;
+$headerheightExtra: 900px;
 .header{
     position: relative;
     height: $headerheight;
@@ -419,8 +419,10 @@ $headerheightSmall: 54%;
             top: 24%;
         }
     }
+    @media screen and (max-height: $headerheightExtra){
+        height: $headerheightExtra;
+    }
     @media screen and (max-width: $smallWidth){
-        height: $headerheightSmall;
         .container{
             height: 100%;
         }
@@ -787,8 +789,10 @@ $headerheightSmall: 54%;
             transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
         }
     }
+    @media screen and (max-height: $headerheightExtra){
+        top: $headerheightExtra;
+    }
     @media screen and (max-width: $smallWidth){
-        top: $headerheightSmall;
         ul li{
             font-size: 14px;
             letter-spacing: 0.1;
