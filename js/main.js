@@ -467,6 +467,10 @@ $(document).ready(function(){
 		title: "Parse Client in Ruby",
 		description: "An object-relational mapper and cloud code webhooks server.",
 		url: "https://github.com/modernistik/parse-stack"
+	},{
+		title: "Parse SDK for Flutter",
+		description: "A Parse SDK for Flutter in development.",
+		url: "https://github.com/phillwiggins/FlutterParseSDK"
 	}];
 
 	for (var i = 0; i < communityRepos.length; i++) {
