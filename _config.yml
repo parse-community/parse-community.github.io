@@ -22,3 +22,5 @@ serverfault_tag:   parse
 # Build settings
 markdown: kramdown
 exclude: [ Gemfile, Gemfile.lock, README.md, config.codekit ]
+
+theme: jekyll-theme-cayman
