@@ -471,6 +471,18 @@ $(document).ready(function(){
 		title: "Parse SDK for Flutter",
 		description: "A Parse SDK for Flutter in development.",
 		url: "https://github.com/phillwiggins/FlutterParseSDK"
+	},{
+		title: "Live Query for .NET",
+		description: "Live Query Project for .NET in development",
+		url: "https://github.com/JonMcPherson/parse-live-query-dotnet"
+	},{
+		title: "MySQL Adapter",
+		description: "MySQL Adapter for Parse Server",
+		url: "https://github.com/dplewis/parse-server-mysql-adapter"
+	},{
+		title: "DynamoDB Adapter",
+		description: "DynamoDB Adapter for Parse Server",
+		url: "https://github.com/benishak/parse-server-dynamodb-adapter"
 	}];
 
 	for (var i = 0; i < communityRepos.length; i++) {
