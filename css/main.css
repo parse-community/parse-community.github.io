@@ -195,7 +195,9 @@ button, .button {
   button.large, .button.large {
     font-family: 'alrightRegular';
     text-transform: uppercase;
-    font-size: 18px; }
+    font-size: 18px;
+    margin-right: 16px;
+    margin-top: 16px; }
 
 nav {
   position: absolute;
