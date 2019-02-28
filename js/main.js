@@ -473,7 +473,7 @@ $(document).ready(function(){
 		url: "https://github.com/phillwiggins/FlutterParseSDK"
 	},{
 		title: "Parse Dashboard for iOS",
-		description: "A beautiful mobile client for managing your Parse apps while you are on the go.",
+		description: "A beautiful mobile client for managing your Parse apps.",
 		url: "https://github.com/nathantannar4/Parse-Dashboard-for-iOS"
 	}];
 
