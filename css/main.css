@@ -195,7 +195,9 @@ button, .button {
   button.large, .button.large {
     font-family: 'alrightRegular';
     text-transform: uppercase;
-    font-size: 18px; }
+    font-size: 18px;
+    margin-right: 16px;
+    margin-top: 16px; }
 
 nav {
   position: absolute;
@@ -280,10 +282,11 @@ nav {
     font-family: 'alrightRegular';
     color: #ffffff;
     position: fixed;
-    top: 21%;
-    left: 0px;
+    top: 100px;
+    left: 5%;
+    right: 5%;
     text-align: center;
-    width: 100%; }
+    width: 90%; }
     .header .heroText h2 {
       color: #66637A; }
       .header .heroText h2 .subheadSection {
@@ -306,7 +309,7 @@ nav {
     @media screen and (max-width: 600px) {
       .header .heroText {
         position: absolute;
-        top: 24%; } }
+        top: 8%; } }
   @media screen and (max-height: 900px) {
     .header {
       height: 900px; } }
