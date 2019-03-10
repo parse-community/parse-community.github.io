@@ -446,8 +446,7 @@ $(document).ready(function(){
 		title: "Bolts ObjC",
 		description: "Collection of low-level libraries to make developing mobile apps easier.",
 		url: "https://github.com/BoltsFramework/Bolts-ObjC"
-	},
-	{
+	},{
 		title: "Bolts Swift",
 		description: "Collection of low-level libraries to make developing mobile apps easier.",
 		url: "https://github.com/BoltsFramework/Bolts-Swift"
@@ -472,14 +471,14 @@ $(document).ready(function(){
 		description: "A Parse SDK for Flutter in development.",
 		url: "https://github.com/phillwiggins/FlutterParseSDK"
 	},{
-    title: "Parse Dashboard for iOS",
+    		title: "Parse Dashboard for iOS",
 		description: "A beautiful iOS client for managing your Parse apps.",
 		url: "https://github.com/nathantannar4/Parse-Dashboard-for-iOS"
 	},{
 		title: "Parse Dashboard for Android",
 		description: "A beautiful Android client for managing your Parse apps.",
 		url: "https://github.com/bitterbit/Parse-Dashboard-Android"
-  },{
+  	},{
 		title: "Live Query for .NET",
 		description: "Live Query Project for .NET in development.",
 		url: "https://github.com/JonMcPherson/parse-live-query-dotnet"
