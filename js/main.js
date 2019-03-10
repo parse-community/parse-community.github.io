@@ -471,6 +471,14 @@ $(document).ready(function(){
 		title: "Parse SDK for Flutter",
 		description: "A Parse SDK for Flutter in development.",
 		url: "https://github.com/phillwiggins/FlutterParseSDK"
+	},{
+		title: "Parse Dashboard for iOS",
+		description: "A beautiful iOS client for managing your Parse apps.",
+		url: "https://github.com/nathantannar4/Parse-Dashboard-for-iOS"
+	},{
+		title: "Parse Dashboard for Android",
+		description: "A beautiful Android client for managing your Parse apps.",
+		url: "https://github.com/bitterbit/Parse-Dashboard-Android"
 	}];
 
 	for (var i = 0; i < communityRepos.length; i++) {
