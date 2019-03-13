@@ -803,11 +803,8 @@ section {
   .repo .repoDescription {
     background: #ffffff;
     border-top: 1px solid #E0E0EA;
-    border-bottom: 1px solid #E0E0EA;
-    height: 72px;
-    overflow: hidden;
+    height: auto;
     text-overflow: ellipsis;
-    border-bottom: 12px #ffffff solid;
     line-height: 24px;
     padding: 12px 16px; }
   .repo .repoButton {

@@ -1006,12 +1006,8 @@ section{
     .repoDescription{
         background: $white;
         border-top: 1px solid $purpleBorder;
-        border-bottom: 1px solid $purpleBorder;
-        height: 72px; //24px line height * 2 + 12px padding * 2
-        overflow: hidden;
+        height: auto;
         text-overflow: ellipsis;
-        //hide overflowing text and limit to two lines
-        border-bottom: 12px $white solid;
         line-height: 24px;
         padding: 12px 16px;
     }
