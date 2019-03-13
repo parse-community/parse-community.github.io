@@ -272,6 +272,8 @@ button, .button{
         font-family: 'alrightRegular';
         text-transform: uppercase;
         font-size: 18px;
+        margin-right: 16px;
+        margin-top: 16px;
     }
 }
 
@@ -388,10 +390,11 @@ $headerheightExtra: 900px;
         font-family: 'alrightRegular';
         color: $white;
         position: fixed;
-        top: 21%;
-        left: 0px;
+        top: 100px;
+        left: 5%;
+        right: 5%;
         text-align: center;
-        width: 100%;
+        width: 90%;
         h2{
             color: $purpleText;
             .subheadSection{
@@ -416,7 +419,7 @@ $headerheightExtra: 900px;
         }
         @media screen and (max-width: $smallWidth){
             position: absolute;
-            top: 24%;
+            top: 8%;
         }
     }
     @media screen and (max-height: $headerheightExtra){
