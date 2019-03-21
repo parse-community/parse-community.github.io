@@ -16,7 +16,7 @@ repository: parse-community/parse-community.github.io
 facebook_username: parseit
 twitter_username:  parseplatform
 github_username:   parse-community
-stackoverflow_tag: parse.com
+stackoverflow_tag: parse-platform
 serverfault_tag:   parse
 
 # Build settings
