@@ -834,7 +834,7 @@ section {
   width: 100%;
   max-width: 650px;
   margin: 0 auto;
-  height: 72px;
+  height: auto;
   background: rgba(14, 105, 161, 0.03);
   position: relative;
   border: none;
@@ -843,7 +843,6 @@ section {
     position: relative; }
     .repoList .repoTitle h4, .repoList .repoTitle p, .repoList .repoDescription h4, .repoList .repoDescription p, .repoList .repoInfo h4, .repoList .repoInfo p {
       text-overflow: ellipsis;
-      overflow: hidden;
       white-space: nowrap; }
   .repoList h4 {
     margin: 16px 0px 4px 0px;
@@ -865,10 +864,9 @@ section {
   .repoList .repoDescription {
     opacity: 0.6;
     margin: 0px;
+    padding-right: 24px;
     padding-left: 24px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis; }
+    padding-bottom: 16px; }
     @media screen and (max-width: 600px) {
       .repoList .repoDescription {
         padding-left: 16px; } }
