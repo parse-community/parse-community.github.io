@@ -844,13 +844,16 @@ section {
   .repoList h4 {
     margin: 16px 0px 4px 0px;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 24px;
     font-family: 'alrightBold';
     color: #66637A;
-    padding-left: 24px; }
+    padding-left: 24px;
+    padding-right: 24px;
+    white-space: normal; }
     @media screen and (max-width: 600px) {
       .repoList h4 {
-        padding-left: 16px; } }
+        padding-left: 16px;
+        padding-right: 16px; } }
   .repoList .metadata {
     margin: 0px;
     opacity: 0.45;

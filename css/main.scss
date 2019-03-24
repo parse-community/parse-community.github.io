@@ -1058,12 +1058,15 @@ section{
     h4{
         margin: 16px 0px 4px 0px;
         font-size: 14px;
-        line-height: 16px;
+        line-height: 24px;
         font-family: 'alrightBold';
         color: $purpleText;
         padding-left: 24px;
+        padding-right: 24px;
+        white-space: normal;
         @media screen and (max-width: $smallWidth){
             padding-left: 16px;
+            padding-right: 16px;
         }
     }
     .metadata{
