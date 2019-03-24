@@ -1043,7 +1043,7 @@ section{
     width: 100%;
     max-width: 650px;
     margin: 0 auto;
-    height: 72px;
+    height: auto;
     background: $fadedBlue;
     position: relative;
     border: none;
@@ -1052,7 +1052,6 @@ section{
         position: relative;
         h4, p{
             text-overflow: ellipsis;
-            overflow: hidden;
             white-space: nowrap;
         }
     }
@@ -1080,11 +1079,11 @@ section{
         opacity: 0.6;
         margin: 0px;
         padding-left: 24px;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+        padding-right: 24px;
+        padding-bottom: 16px;
         @media screen and (max-width: $smallWidth){
             padding-left: 16px;
+            padding-right: 16px;
         }
     }
     .language{
