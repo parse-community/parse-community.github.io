@@ -734,7 +734,8 @@ section {
     padding: 10px 16px;
     position: relative; }
     .repo .repoTitle h4 {
-      transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+      transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      white-space: normal; }
     .repo .repoTitle p {
       margin: 0px;
       opacity: 0.45;
