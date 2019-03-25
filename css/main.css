@@ -859,7 +859,11 @@ section {
     margin: 0px;
     opacity: 0.45;
     font-size: 14px;
-    font-family: "din"; }
+    font-family: "din";
+    padding-right: 8px; }
+    @media screen and (max-width: 480px) {
+      .repoList .metadata {
+        display: none; } }
     .repoList .metadata span {
       margin-right: 12px; }
   .repoList .repoDescription {
@@ -877,6 +881,9 @@ section {
     padding-right: 16px;
     top: 2px;
     position: relative; }
+    @media screen and (max-width: 540px) {
+      .repoList .language {
+        display: none; } }
   .repoList .repoInfo {
     height: 100%;
     right: 0px;

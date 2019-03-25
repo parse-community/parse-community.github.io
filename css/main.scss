@@ -1075,8 +1075,12 @@ section{
         opacity: 0.45;
         font-size: 14px;
         font-family: "din";
+        padding-right: 8px;
         span{
             margin-right: 12px;
+        }
+        @media screen and (max-width: $smallWidth){
+            display: none;
         }
     }
     .repoDescription{
@@ -1095,6 +1099,11 @@ section{
         padding-right: 16px;
         top: 2px;
         position: relative;
+
+        @media screen and (max-width: 540px){
+            display: none;
+        }
+
     }
     .repoInfo{
         height: 100%;
