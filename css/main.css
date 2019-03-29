@@ -734,7 +734,8 @@ section {
     padding: 10px 16px;
     position: relative; }
     .repo .repoTitle h4 {
-      transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1); }
+      transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      white-space: normal; }
     .repo .repoTitle p {
       margin: 0px;
       opacity: 0.45;
@@ -844,18 +845,25 @@ section {
   .repoList h4 {
     margin: 16px 0px 4px 0px;
     font-size: 14px;
-    line-height: 16px;
+    line-height: 24px;
     font-family: 'alrightBold';
     color: #66637A;
-    padding-left: 24px; }
+    padding-left: 24px;
+    padding-right: 24px;
+    white-space: normal; }
     @media screen and (max-width: 600px) {
       .repoList h4 {
-        padding-left: 16px; } }
+        padding-left: 16px;
+        padding-right: 16px; } }
   .repoList .metadata {
     margin: 0px;
     opacity: 0.45;
     font-size: 14px;
-    font-family: "din"; }
+    font-family: "din";
+    padding-right: 8px; }
+    @media screen and (max-width: 480px) {
+      .repoList .metadata {
+        display: none; } }
     .repoList .metadata span {
       margin-right: 12px; }
   .repoList .repoDescription {
@@ -873,6 +881,9 @@ section {
     padding-right: 16px;
     top: 2px;
     position: relative; }
+    @media screen and (max-width: 540px) {
+      .repoList .language {
+        display: none; } }
   .repoList .repoInfo {
     height: 100%;
     right: 0px;

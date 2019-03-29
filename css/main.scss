@@ -922,6 +922,7 @@ section{
         position: relative;
         h4{
             transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            white-space: normal;
         }
         p{
             margin: 0px;
@@ -1058,12 +1059,15 @@ section{
     h4{
         margin: 16px 0px 4px 0px;
         font-size: 14px;
-        line-height: 16px;
+        line-height: 24px;
         font-family: 'alrightBold';
         color: $purpleText;
         padding-left: 24px;
+        padding-right: 24px;
+        white-space: normal;
         @media screen and (max-width: $smallWidth){
             padding-left: 16px;
+            padding-right: 16px;
         }
     }
     .metadata{
@@ -1071,8 +1075,12 @@ section{
         opacity: 0.45;
         font-size: 14px;
         font-family: "din";
+        padding-right: 8px;
         span{
             margin-right: 12px;
+        }
+        @media screen and (max-width: $smallWidth){
+            display: none;
         }
     }
     .repoDescription{
@@ -1091,6 +1099,11 @@ section{
         padding-right: 16px;
         top: 2px;
         position: relative;
+
+        @media screen and (max-width: 540px){
+            display: none;
+        }
+
     }
     .repoInfo{
         height: 100%;
