@@ -490,6 +490,10 @@ $(document).ready(function(){
 		title: "DynamoDB Adapter",
 		description: "DynamoDB Adapter for Parse Server.",
 		url: "https://github.com/benishak/parse-server-dynamodb-adapter"
+	},{
+		title: "Parse Cloud Class",
+		description: "Extendable way to set up Parse Cloud classes behaviour.",
+		url: "https://github.com/owsas/parse-cloud-class"
 	}];
 
 	for (var i = 0; i < communityRepos.length; i++) {
