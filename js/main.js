@@ -475,7 +475,7 @@ $(document).ready(function(){
 		description: "A beautiful iOS client for managing your Parse apps.",
 		url: "https://github.com/nathantannar4/Parse-Dashboard-for-iOS"
 	},{
-		title: "Parse Dashboard for Android",
+		title: "Android Dashboard",
 		description: "A beautiful Android client for managing your Parse apps.",
 		url: "https://github.com/bitterbit/Parse-Dashboard-Android"
   	},{
