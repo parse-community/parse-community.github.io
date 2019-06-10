@@ -906,7 +906,6 @@ section {
     display: block;
     text-decoration: none;
     float: left;
-    height: 100%;
     width: 100%; }
     .repoList a:hover h4 {
       color: #169CEE; }
