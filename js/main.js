@@ -494,6 +494,10 @@ $(document).ready(function(){
 		title: "Parse Cloud Class",
 		description: "Extendable way to set up Parse Cloud classes behaviour.",
 		url: "https://github.com/owsas/parse-cloud-class"
+	},{
+		title: "Parse Auditor",
+		description: "Add automated data auditing/versioning to classes.",
+		url: "https://github.com/Blackburn-Labs/parse-auditor"
 	}];
 
 	for (var i = 0; i < communityRepos.length; i++) {
