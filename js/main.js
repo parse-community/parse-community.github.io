@@ -64,7 +64,7 @@ $(document).ready(function(){
 
 			//Sort SDK Repos
 			//if title contains sdk hide it (since we hardcode them)
-			if (sortTitle.indexOf("sdk") >= 0 || sortTitle.indexOf("cli") >= 0) {
+			if (sortTitle.indexOf("sdk") >= 0 || sortTitle.indexOf("cli") >= 0 || sortTitle.indexOf("Swift") >= 0) {
 				//if title matches hardcoded repo title then use these forks/stars
 				if (sortTitle.includes("ios") === true){
 					//ios stars/forks
@@ -96,6 +96,9 @@ $(document).ready(function(){
 				} else if (sortTitle.includes("cli") === true){
 					$(".cloudCodeRepo .sdkRepoStar").text(stars);
 					$(".cloudCodeRepo .sdkRepoFork").text(forks);
+				} else if (sortTitle.includes("swift") === true){
+					$(".swiftRepo .sdkRepoStar").text(stars);
+					$(".swiftRepo .sdkRepoFork").text(forks);
 				}
 				continue;
 			}
@@ -439,18 +442,6 @@ $(document).ready(function(){
 	}
 
 	var communityRepos = [{
-		title: "Bolts Android",
-		description: "Collection of low-level libraries to make developing mobile apps easier.",
-		url: "https://github.com/BoltsFramework/Bolts-Android"
-	},{
-		title: "Bolts ObjC",
-		description: "Collection of low-level libraries to make developing mobile apps easier.",
-		url: "https://github.com/BoltsFramework/Bolts-ObjC"
-	},{
-		title: "Bolts Swift",
-		description: "Collection of low-level libraries to make developing mobile apps easier.",
-		url: "https://github.com/BoltsFramework/Bolts-Swift"
-	},{
 		title: "Parse Client in Go",
 		description: "Parse API Client Library written in Go.",
 		url: "https://github.com/kylemcc/parse"
@@ -467,11 +458,7 @@ $(document).ready(function(){
 		description: "An object-relational mapper and cloud code webhooks server.",
 		url: "https://github.com/modernistik/parse-stack"
 	},{
-		title: "Parse SDK for Flutter",
-		description: "A Parse SDK for Flutter in development.",
-		url: "https://github.com/phillwiggins/FlutterParseSDK"
-	},{
-    		title: "Parse Dashboard for iOS",
+    title: "Parse Dashboard for iOS",
 		description: "A beautiful iOS client for managing your Parse apps.",
 		url: "https://github.com/nathantannar4/Parse-Dashboard-for-iOS"
 	},{
