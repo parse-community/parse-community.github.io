@@ -32,6 +32,7 @@ $(document).ready(function(){
 				sortTitle 		= title.toLowerCase(),
 				url 			= gitJson[j].html_url,
 				hasIssues 		= gitJson[j].has_issues,
+				archived			= gitJson[j].archived,
 				description 	= gitJson[j].description,
 				stars 			= parseInt(gitJson[j].stargazers_count),
 				forks 			= parseInt(gitJson[j].forks_count),
@@ -107,7 +108,7 @@ $(document).ready(function(){
 			}
 
 			//ignore repos with issues turned off
-			if (hasIssues === false){
+			if (hasIssues === false || archived === true || title === '.github' || title === 'Governance' || title === 'parse-community-peril' || title === 'parse-community.github.io' || title === 'blog' || title === 'relay-examples'){
 				continue;
 			}
 
