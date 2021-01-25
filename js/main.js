@@ -96,7 +96,7 @@ $(document).ready(function(){
 				} else if (sortTitle.includes("cli") === true){
 					$(".cloudCodeRepo .sdkRepoStar").text(stars);
 					$(".cloudCodeRepo .sdkRepoFork").text(forks);
-				} else if (sortTitle.includes("swift") === true){
+				} else if (sortTitle.includes("Swift") === true){
 					$(".swiftRepo .sdkRepoStar").text(stars);
 					$(".swiftRepo .sdkRepoFork").text(forks);
 				}
