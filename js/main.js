@@ -64,7 +64,7 @@ $(document).ready(function(){
 
 			//Sort SDK Repos
 			//if title contains sdk hide it (since we hardcode them)
-			if (sortTitle.indexOf("sdk") >= 0 || sortTitle.indexOf("cli") >= 0 || sortTitle.indexOf("Swift") >= 0) {
+			if (sortTitle.indexOf("sdk") >= 0 || sortTitle.indexOf("cli") >= 0 || sortTitle.indexOf("parse-swift") >= 0) {
 				//if title matches hardcoded repo title then use these forks/stars
 				if (sortTitle.includes("ios") === true){
 					//ios stars/forks
@@ -96,9 +96,12 @@ $(document).ready(function(){
 				} else if (sortTitle.includes("cli") === true){
 					$(".cloudCodeRepo .sdkRepoStar").text(stars);
 					$(".cloudCodeRepo .sdkRepoFork").text(forks);
-				} else if (sortTitle.includes("Swift") === true){
+				} else if (sortTitle.includes("swift") === true){
 					$(".swiftRepo .sdkRepoStar").text(stars);
 					$(".swiftRepo .sdkRepoFork").text(forks);
+				} else if (sortTitle.includes("flutter") === true){
+					$(".flutterRepo .sdkRepoStar").text(stars);
+					$(".flutterRepo .sdkRepoFork").text(forks);
 				}
 				continue;
 			}
