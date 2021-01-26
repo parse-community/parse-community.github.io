@@ -103,12 +103,14 @@ $(document).ready(function(){
 				} else if (sortTitle.includes("flutter") === true){
 					$(".flutterRepo .sdkRepoStar").text(stars);
 					$(".flutterRepo .sdkRepoFork").text(forks);
+					$(".dartRepo .sdkRepoStar").text(stars);
+					$(".dartRepo .sdkRepoFork").text(forks);
 				}
 				continue;
 			}
 
 			//ignore repos with issues turned off
-			if (hasIssues === false || archived === true || title === '.github' || title === 'Governance' || title === 'parse-community-peril' || title === 'parse-community.github.io' || title === 'blog' || title === 'relay-examples'){
+			if (hasIssues === false || archived === true || title === '.github' || title === 'Governance' || title === 'parse-community-peril' || title === 'parse-community.github.io' || title === 'blog' || title === 'relay-examples' || title === 'docs'|| title === 'parse-facebook-user-session'){
 				continue;
 			}
 
