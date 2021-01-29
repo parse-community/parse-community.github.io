@@ -32,6 +32,7 @@ $(document).ready(function(){
 				sortTitle 		= title.toLowerCase(),
 				url 			= gitJson[j].html_url,
 				hasIssues 		= gitJson[j].has_issues,
+				archived			= gitJson[j].archived,
 				description 	= gitJson[j].description,
 				stars 			= parseInt(gitJson[j].stargazers_count),
 				forks 			= parseInt(gitJson[j].forks_count),
@@ -64,7 +65,7 @@ $(document).ready(function(){
 
 			//Sort SDK Repos
 			//if title contains sdk hide it (since we hardcode them)
-			if (sortTitle.indexOf("sdk") >= 0 || sortTitle.indexOf("cli") >= 0) {
+			if (sortTitle.indexOf("sdk") >= 0 || sortTitle.indexOf("cli") >= 0 || sortTitle.indexOf("parse-swift") >= 0) {
 				//if title matches hardcoded repo title then use these forks/stars
 				if (sortTitle.includes("ios") === true){
 					//ios stars/forks
@@ -96,41 +97,34 @@ $(document).ready(function(){
 				} else if (sortTitle.includes("cli") === true){
 					$(".cloudCodeRepo .sdkRepoStar").text(stars);
 					$(".cloudCodeRepo .sdkRepoFork").text(forks);
+				} else if (sortTitle.includes("swift") === true){
+					$(".swiftRepo .sdkRepoStar").text(stars);
+					$(".swiftRepo .sdkRepoFork").text(forks);
+				} else if (sortTitle.includes("flutter") === true){
+					$(".flutterRepo .sdkRepoStar").text(stars);
+					$(".flutterRepo .sdkRepoFork").text(forks);
+					$(".dartRepo .sdkRepoStar").text(stars);
+					$(".dartRepo .sdkRepoFork").text(forks);
 				}
 				continue;
 			}
 
 			//ignore repos with issues turned off
-			if (hasIssues === false){
+			if (hasIssues === false || archived === true || title === '.github' || title === 'Governance' || title === 'parse-community-peril' || title === 'parse-community.github.io' || title === 'blog' || title === 'relay-examples' || title === 'docs'|| title === 'parse-facebook-user-session'){
 				continue;
 			}
 
 			//Sort non-SDK repos into categories
 
-			//SOCIAL CATEGORY
-			//  if name includes facebook, twitter
-			if (sortTitle.includes("facebook") === true || sortTitle.includes("twitter") === true){
-				//write them to the page
-				addToSection($("section.socialRepos table"), url, title, description, forks, stars, language);
-			//TUTORIALS CATEGORY
-			//  if name tutorial
-			} else if (sortTitle.includes("tutorial") === true || sortDescription.includes("tutorial")){
-				//write them to the page
-				addToSection($("section.tutorials table"), url, title, description, forks, stars, language);
 			//PARSE SERVER CATEGORY
 			//  if name parse-server, parse-dashboard
-			} else if (sortTitle === "parse-server" || sortTitle === "parse-dashboard"){
+			if (sortTitle === "parse-server" || sortTitle === "parse-dashboard" || sortTitle === "parse-server-example"){
 				//write them to the page
 				addToSection($("section.parseServer table"), url, title, description, forks, stars, language);
 			//ADAPTERS REPOSITORIES
 			} else if (sortTitle.includes("parse-server") === true || sortTitle.includes("parse-dashboard")){
 				//write them to the page
 				addToSection($("section.parseServerAdapters table"), url, title, description, forks, stars, language);
-			//SAMPLES CATEGORY
-			//  if name todo, demo, any, scrumptious, store, f8, internetcar
-			} else if (sortTitle.includes("todo") === true || sortTitle.includes("demo") === true || sortTitle.includes("any") === true || sortTitle.includes("store") === true || sortTitle.includes("f8") === true || sortTitle.includes("internetcar") === true || sortDescription.includes("example") || sortDescription.includes("sample")){
-				//write them to the page
-				addToSection($("section.sampleApps table"), url, title, description, forks, stars, language);
 			//OTHER CATEGORY
 			//   ...everything else
 			} else if (description) {
@@ -439,39 +433,23 @@ $(document).ready(function(){
 	}
 
 	var communityRepos = [{
-		title: "Bolts Android",
-		description: "Collection of low-level libraries to make developing mobile apps easier.",
-		url: "https://github.com/BoltsFramework/Bolts-Android"
-	},{
-		title: "Bolts ObjC",
-		description: "Collection of low-level libraries to make developing mobile apps easier.",
-		url: "https://github.com/BoltsFramework/Bolts-ObjC"
-	},{
-		title: "Bolts Swift",
-		description: "Collection of low-level libraries to make developing mobile apps easier.",
-		url: "https://github.com/BoltsFramework/Bolts-Swift"
-	},{
-		title: "Parse Client in Go",
-		description: "Parse API Client Library written in Go.",
-		url: "https://github.com/kylemcc/parse"
-	},{
-		title: "Parse Ember Wrapper",
-		description: "Includes an adapter, serializer and a session service for auth.",
-		url: "https://github.com/GetBlimp/ember-parse"
-	},{
-		title: "Parse Python Wrapper",
-		description: "A Python wrapper for the Parse.com API.",
-		url: "https://github.com/dgrtwo/ParsePy"
-	},{
 		title: "Parse Client in Ruby",
 		description: "An object-relational mapper and cloud code webhooks server.",
 		url: "https://github.com/modernistik/parse-stack"
 	},{
-		title: "Parse SDK for Flutter",
-		description: "A Parse SDK for Flutter in development.",
-		url: "https://github.com/phillwiggins/FlutterParseSDK"
+		title: "Parse Cloud Class",
+		description: "Extendable way to set up Parse Cloud classes behaviour.",
+		url: "https://github.com/owsas/parse-cloud-class"
 	},{
-    		title: "Parse Dashboard for iOS",
+		title: "Parse Auditor",
+		description: "Add automated data auditing/versioning to classes.",
+		url: "https://github.com/Blackburn-Labs/parse-auditor"
+	},{
+		title: "Parse Python Wrapper",
+		description: "A Python wrapper for the Parse Server API.",
+		url: "https://github.com/dgrtwo/ParsePy"
+	},{
+    title: "Parse Dashboard for iOS",
 		description: "A beautiful iOS client for managing your Parse apps.",
 		url: "https://github.com/nathantannar4/Parse-Dashboard-for-iOS"
 	},{
@@ -491,13 +469,13 @@ $(document).ready(function(){
 		description: "DynamoDB Adapter for Parse Server.",
 		url: "https://github.com/benishak/parse-server-dynamodb-adapter"
 	},{
-		title: "Parse Cloud Class",
-		description: "Extendable way to set up Parse Cloud classes behaviour.",
-		url: "https://github.com/owsas/parse-cloud-class"
+		title: "Parse Ember Wrapper",
+		description: "Includes an adapter, serializer and a session service for auth.",
+		url: "https://github.com/GetBlimp/ember-parse"
 	},{
-		title: "Parse Auditor",
-		description: "Add automated data auditing/versioning to classes.",
-		url: "https://github.com/Blackburn-Labs/parse-auditor"
+		title: "Parse Client in Go",
+		description: "Parse API Client Library written in Go.",
+		url: "https://github.com/kylemcc/parse"
 	}];
 
 	for (var i = 0; i < communityRepos.length; i++) {

@@ -7,7 +7,7 @@
 
 # Site settings
 name: Parse Community
-title: Parse + Open Source = ❤️
+title: Parse Platform
 email: community@parseplatform.org
 description: The open source GitHub page for the Parse platform.
 baseurl: "" # the subpath of your site, e.g. /blog
