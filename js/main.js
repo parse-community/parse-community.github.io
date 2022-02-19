@@ -449,7 +449,7 @@ $(document).ready(function(){
 		description: "A Python wrapper for the Parse Server API.",
 		url: "https://github.com/dgrtwo/ParsePy"
 	},{
-    title: "Parse Dashboard for iOS",
+    		title: "Parse Dashboard for iOS",
 		description: "A beautiful iOS client for managing your Parse apps.",
 		url: "https://github.com/nathantannar4/Parse-Dashboard-for-iOS"
 	},{
@@ -476,6 +476,10 @@ $(document).ready(function(){
 		title: "Parse Client in Go",
 		description: "Parse API Client Library written in Go.",
 		url: "https://github.com/kylemcc/parse"
+	},{
+		title: "Parse Server Any Analytics",
+		description: "Supports any 3rd party analytics tool.",
+		url: "https://github.com/netreconlab/parse-server-any-analytics-adapter"
 	}];
 
 	for (var i = 0; i < communityRepos.length; i++) {
