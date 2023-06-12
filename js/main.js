@@ -9,9 +9,9 @@ $(document).ready(function(){
 	  //  Use Jekyll Metadata to list the repos
 	 // (except for community repos)
 	//====================================//
-	var totalStars = 0,
-		totalForks = 0,
-		totalRepos = 0;
+	let totalStars = 0;
+	let totalForks = 0;
+	let totalRepos = 0;
 
 	//render repo to page
 	function addToSection(sectionTitle, url, title, description, forks, stars, language){
@@ -22,22 +22,19 @@ $(document).ready(function(){
 		sectionTitle.append("<tr class='repoList'><td colspan='4'><a href='" + url + "' target='_blank'><h4>" + title + "</h4><p class='repoDescription'>" + description + "</p></td></tr>");
 	}
 
+
 	if (typeof gitJson !== 'undefined'){
-		// Sort the gitJson by popularity
-		gitJson = gitJson.sort(function (a, b) {
-			return parseInt(a.stargazers_count) < parseInt(b.stargazers_count);
-		});
-		for (var j = 0; j < gitJson.length; j++) {
-			var title 			= gitJson[j].name,
-				sortTitle 		= title.toLowerCase(),
-				url 			= gitJson[j].html_url,
-				hasIssues 		= gitJson[j].has_issues,
-				archived			= gitJson[j].archived,
-				description 	= gitJson[j].description,
-				stars 			= parseInt(gitJson[j].stargazers_count),
-				forks 			= parseInt(gitJson[j].forks_count),
-				language    	= gitJson[j].language,
-				sortDescription = "";
+		for (const git of gitJson) {
+			const title 			= git.name;
+				const sortTitle 		= title.toLowerCase();
+				const url 			= git.html_url;
+				const hasIssues 		= git.has_issues;
+				const archived			= git.archived;
+				const description 	= git.description;
+				const stars 			= parseInt(git.stargazers_count);
+				const forks 			= parseInt(git.forks_count);
+				let language    	= git.language;
+				let sortDescription = "";
 
 			// sortable description
 			if (description !== null && description !== ""){
@@ -65,49 +62,7 @@ $(document).ready(function(){
 
 			//Sort SDK Repos
 			//if title contains sdk hide it (since we hardcode them)
-			if (sortTitle.indexOf("sdk") >= 0 || sortTitle.indexOf("cli") >= 0 || sortTitle.indexOf("parse-swift") >= 0) {
-				//if title matches hardcoded repo title then use these forks/stars
-				if (sortTitle.includes("ios") === true){
-					//ios stars/forks
-					$(".iosRepo .sdkRepoStar").text(stars);
-					$(".iosRepo .sdkRepoFork").text(forks);
-				} else if (sortTitle.includes("android") === true){
-					$(".androidRepo .sdkRepoStar").text(stars);
-					$(".androidRepo .sdkRepoFork").text(forks);
-				} else if (sortTitle.includes("javascript") === true || sortTitle.includes("js") === true){
-					$(".javascriptRepo .sdkRepoStar").text(stars);
-					$(".javascriptRepo .sdkRepoFork").text(forks);
-				} else if (sortTitle.includes("php") === true){
-					$(".phpRepo .sdkRepoStar").text(stars);
-					$(".phpRepo .sdkRepoFork").text(forks);
-				} else if (sortTitle.includes("net") === true){
-					//xamarin and dot net
-					$(".xamarinRepo .sdkRepoStar").text(stars);
-					$(".xamarinRepo .sdkRepoFork").text(forks);
 
-					//Unity
-					$(".unityRepo .sdkRepoStar").text(stars);
-					$(".unityRepo .sdkRepoFork").text(forks);
-				} else if (sortTitle.includes("arduino") === true){
-					$(".arduinoRepo .sdkRepoStar").text(stars);
-					$(".arduinoRepo .sdkRepoFork").text(forks);
-				} else if (sortTitle.includes("embedded") === true){
-					$(".embeddedRepo .sdkRepoStar").text(stars);
-					$(".embeddedRepo .sdkRepoFork").text(forks);
-				} else if (sortTitle.includes("cli") === true){
-					$(".cloudCodeRepo .sdkRepoStar").text(stars);
-					$(".cloudCodeRepo .sdkRepoFork").text(forks);
-				} else if (sortTitle.includes("swift") === true){
-					$(".swiftRepo .sdkRepoStar").text(stars);
-					$(".swiftRepo .sdkRepoFork").text(forks);
-				} else if (sortTitle.includes("flutter") === true){
-					$(".flutterRepo .sdkRepoStar").text(stars);
-					$(".flutterRepo .sdkRepoFork").text(forks);
-					$(".dartRepo .sdkRepoStar").text(stars);
-					$(".dartRepo .sdkRepoFork").text(forks);
-				}
-				continue;
-			}
 
 			//ignore repos with issues turned off
 			if (hasIssues === false || archived === true || title === '.github' || title === 'Governance' || title === 'parse-community-peril' || title === 'parse-community.github.io' || title === 'blog' || title === 'relay-examples' || title === 'docs'|| title === 'parse-facebook-user-session'){
@@ -136,18 +91,10 @@ $(document).ready(function(){
 	}
 
 	//write total forks, stars and repos into the page
-	$(".heroText .repoCount").text(totalRepos);
-	$(".heroText .starCount").text(totalStars);
-	$(".heroText .forkCount").text(totalForks);
-
-	  //====================================//
-	 //  expand/contract
-	//====================================//
-	$(".expandableRepoLink").click(function(){
-		var clicked = $(this);
-		$(".expandableRepoLink").not(clicked).removeClass("expanded");
-		clicked.toggleClass("expanded");
-	});
+	const formatNumber = new Intl.NumberFormat().format
+	$(".heroText .repoCount").text(formatNumber(totalRepos));
+	$(".heroText .starCount").text(formatNumber(totalStars));
+	$(".heroText .forkCount").text(formatNumber(totalForks));
 
 	  //====================================//
 	 //  Header animation
