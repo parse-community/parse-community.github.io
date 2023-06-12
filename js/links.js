@@ -193,7 +193,6 @@ $(document).ready(function () {
   }
 
   $(".expandableRepoLink").click(function(){
-    console.log("CLICKED");
 		const clicked = $(this);
 		$(".expandableRepoLink").not(clicked).removeClass("expanded");
 		clicked.toggleClass("expanded");
