@@ -379,13 +379,25 @@ $(document).ready(function(){
 		$("section.community").append("<div class='repo'><div class='repoTitle'><h4>" + title + "</h4></div><div class='repoDescription'><p>" + description + "</p></div><div class='repoButton'><a href=" + url + " target='_blank'><button class='outline'>View on GitHub</button></a></div></div>");
 	}
 
-	var communityRepos = [{
+	const communityRepos = [{
+		title: "Oracle Database Adapter",
+		description: "A Oracle Database Adapter for Parse Server.",
+		url: "https://github.com/oracle-samples/oracleadapter-parse"
+	},{
+		title: "MySQL Database Adapter",
+		description: "A MySQL Database Adapter for Parse Server.",
+		url: "https://github.com/dplewis/parse-server-mysql-adapter"
+	},{
+		title: "DynamoDB Database Adapter",
+		description: "A DynamoDB Database Adapter for Parse Server.",
+		url: "https://github.com/benishak/parse-server-dynamodb-adapter"
+	},{
 		title: "Parse Client in Ruby",
 		description: "An object-relational mapper and cloud code webhooks server.",
 		url: "https://github.com/modernistik/parse-stack"
 	},{
 		title: "Parse Cloud Class",
-		description: "Extendable way to set up Parse Cloud classes behaviour.",
+		description: "Extendable way to set up Parse Cloud classes behavior.",
 		url: "https://github.com/owsas/parse-cloud-class"
 	},{
 		title: "Parse Auditor",
@@ -407,14 +419,6 @@ $(document).ready(function(){
 		title: "Live Query for .NET",
 		description: "Live Query Project for .NET in development.",
 		url: "https://github.com/JonMcPherson/parse-live-query-dotnet"
-	},{
-		title: "MySQL Adapter",
-		description: "MySQL Adapter for Parse Server.",
-		url: "https://github.com/dplewis/parse-server-mysql-adapter"
-	},{
-		title: "DynamoDB Adapter",
-		description: "DynamoDB Adapter for Parse Server.",
-		url: "https://github.com/benishak/parse-server-dynamodb-adapter"
 	},{
 		title: "Parse Ember Wrapper",
 		description: "Includes an adapter, serializer and a session service for auth.",
