@@ -1234,3 +1234,58 @@ footer{
         }
     }
 }
+
+//==========================================//
+// Maintenance Notice
+//==========================================//
+.maintenance-notice {
+    background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+    border-bottom: 3px solid #E55757;
+    color: white;
+    padding: 12px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+    .maintenance-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .maintenance-icon {
+        font-size: 18px;
+        margin-right: 8px;
+    }
+
+    .maintenance-text {
+        font-size: 14px;
+        line-height: 1.4;
+        font-weight: 400;
+
+        strong {
+            font-weight: 600;
+        }
+    }
+
+    @media (max-width: $smallWidth) {
+        padding: 15px 20px;
+        
+        .maintenance-content {
+            flex-direction: column;
+            gap: 4px;
+        }
+        
+        .maintenance-icon {
+            margin-right: 0;
+        }
+        
+        .maintenance-text {
+            font-size: 13px;
+            text-align: center;
+        }
+    }
+}
